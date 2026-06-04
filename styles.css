@@ -296,7 +296,7 @@ h1,h2,h3,h4,p{margin:0;}
    FOOTER
    ============================================================ */
 .footer{border-top:1px solid var(--line);background:var(--paper-2);}
-.footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;}
+.footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;}
 .footer__col{padding:clamp(34px,4vw,52px) clamp(20px,2.5vw,32px);border-right:1px solid var(--line);}
 .footer__col:last-child{border-right:none;}
 .footer .brand{margin-bottom:16px;}

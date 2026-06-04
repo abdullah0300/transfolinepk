@@ -310,12 +310,16 @@ h1,h2,h3,h4,p{margin:0;}
 /* ============================================================
    WHATSAPP FLOATING BUTTON
    ============================================================ */
-.wa-float{position:fixed;bottom:28px;right:28px;z-index:90;width:56px;height:56px;border-radius:50%;
+.float-btns{position:fixed;bottom:28px;right:28px;z-index:90;display:flex;flex-direction:column;gap:12px;align-items:center;}
+.call-float{width:56px;height:56px;border-radius:50%;background:#2563eb;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s;text-decoration:none;}
+.call-float:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(0,0,0,.25);}
+.call-float svg{width:28px;height:28px;}
+.wa-float{width:56px;height:56px;border-radius:50%;
   background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;
   box-shadow:0 4px 14px rgba(0,0,0,.2);transition:transform .2s,box-shadow .2s;}
 .wa-float:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(0,0,0,.25);}
 .wa-float svg{width:30px;height:30px;}
-@media(max-width:480px){.wa-float{bottom:20px;right:20px;width:50px;height:50px;}.wa-float svg{width:26px;height:26px;}}
+@media(max-width:480px){.float-btns{bottom:20px;right:20px;gap:10px;}.call-float,.wa-float{width:50px;height:50px;}.call-float svg{width:24px;height:24px;}.wa-float svg{width:26px;height:26px;}}
 
 /* ============================================================
    SERVICE PAGES
@@ -544,6 +548,13 @@ h1,h2,h3,h4,p{margin:0;}
   .nav__links,.nav__tel{ display:none; }
   .nav__burger{ display:flex; }
 
+  /* Hero meta: wrap tighter */
+  .hero__meta{ gap:4px 18px; }
+
+  /* Trusted strip: stack label above marquee */
+  .mfr__in{ flex-wrap:wrap; justify-content:center; gap:8px 0; padding:12px 0; }
+  .mfr__lab{ width:100%; text-align:center; }
+
   /* Hero: single column */
   .hero__grid{ grid-template-columns:1fr; }
   .hero__l{ border-right:none; padding-right:0; border-bottom:1px solid var(--line); }
@@ -603,6 +614,10 @@ h1,h2,h3,h4,p{margin:0;}
 
   /* Nav: tighten */
   .nav__in{ gap:12px; }
+
+  /* Hero meta: 2x2 grid on small phones */
+  .hero__meta{ display:grid; grid-template-columns:1fr 1fr; gap:6px 12px; padding:12px 0; }
+  .hero__meta span{ font-size:10px; letter-spacing:.08em; }
 
   /* Hero CTA: stack vertically */
   .hero__cta{ flex-direction:column; align-items:flex-start; }

@@ -123,9 +123,11 @@ h1,h2,h3,h4,p{margin:0;}
    HERO / NAMEPLATE
    ============================================================ */
 .hero{border-bottom:1px solid var(--line);}
-.hero__meta{display:flex;flex-wrap:wrap;gap:6px 28px;padding:14px 0;border-bottom:1px solid var(--line);}
-.hero__meta span{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);display:flex;align-items:center;gap:8px;}
+.hero__meta{display:flex;flex-wrap:wrap;gap:6px 28px;padding:14px 0;border-bottom:1px solid var(--line);overflow:hidden;}
+.hero__meta span{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);display:flex;align-items:center;gap:8px;white-space:nowrap;}
 .hero__meta span .sq{width:6px;height:6px;background:var(--accent);}
+.hero__meta-track{display:none;}
+@keyframes meta-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 .hero__grid{display:grid;grid-template-columns:1.05fr .95fr;}
 .hero__l{padding:clamp(40px,5.5vw,72px) clamp(20px,3vw,44px) clamp(36px,4vw,52px) 0;}
 @media(min-width:760px){.hero__l{border-right:1px solid var(--line);}}
@@ -158,6 +160,7 @@ h1,h2,h3,h4,p{margin:0;}
 .mfr{border-bottom:1px solid var(--line);overflow:hidden;}
 .mfr__in{display:flex;align-items:center;gap:16px 26px;padding:16px 0;flex-wrap:nowrap;}
 .mfr__lab{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);flex:none;}
+.mfr__lab-short{display:none;}
 .mfr__track{overflow:hidden;flex:1;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
 .mfr__list{display:flex;gap:10px 22px;align-items:center;flex-wrap:nowrap;width:max-content;animation:marquee 25s linear infinite;}
 .mfr__list span{font-family:var(--cond);font-weight:600;font-size:16px;color:var(--ink-2);white-space:nowrap;}
@@ -548,12 +551,23 @@ h1,h2,h3,h4,p{margin:0;}
   .nav__links,.nav__tel{ display:none; }
   .nav__burger{ display:flex; }
 
-  /* Hero meta: wrap tighter */
-  .hero__meta{ gap:4px 18px; }
+  /* Hero meta: horizontal scroll marquee on mobile */
+  .hero__meta{ display:block; overflow:hidden; padding:12px 0;
+    mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); }
+  .hero__meta > span{ display:none; }
+  .hero__meta-track{ display:flex; gap:0 28px; width:max-content; animation:meta-scroll 18s linear infinite; }
+  .hero__meta-track span{ font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-2); white-space:nowrap; display:flex; align-items:center; gap:8px; }
+  .hero__meta-track span .sq{ width:6px; height:6px; background:var(--accent); }
+  .hero__meta-track span::after{ content:"·"; margin-left:28px; color:var(--line-2); }
+  .hero__meta-track span:last-child::after{ content:none; }
 
-  /* Trusted strip: stack label above marquee */
-  .mfr__in{ flex-wrap:wrap; justify-content:center; gap:8px 0; padding:12px 0; }
-  .mfr__lab{ width:100%; text-align:center; }
+  /* Trusted strip: short label + better marquee on mobile */
+  .mfr__in{ gap:10px 18px; padding:12px 0; }
+  .mfr__lab .mfr__lab-full{ display:none; }
+  .mfr__lab .mfr__lab-short{ display:inline; }
+  .mfr__list{ animation:marquee 16s linear infinite; }
+  .mfr__list span{ font-size:15px; }
 
   /* Hero: single column */
   .hero__grid{ grid-template-columns:1fr; }
@@ -615,10 +629,6 @@ h1,h2,h3,h4,p{margin:0;}
   /* Nav: tighten */
   .nav__in{ gap:12px; }
 
-  /* Hero meta: 2x2 grid on small phones */
-  .hero__meta{ display:grid; grid-template-columns:1fr 1fr; gap:6px 12px; padding:12px 0; }
-  .hero__meta span{ font-size:10px; letter-spacing:.08em; }
-
   /* Hero CTA: stack vertically */
   .hero__cta{ flex-direction:column; align-items:flex-start; }
   .hero__cta .btn{ width:100%; justify-content:center; }
@@ -661,6 +671,6 @@ h1,h2,h3,h4,p{margin:0;}
   .c-reg .v{ font-size:15px; }
 
   /* Trusted strip */
-  .mfr__list span{ font-size:14px; }
-  .mfr__list span::before{ margin-right:12px; }
+  .mfr__list span{ font-size:13px; }
+  .mfr__list span::before{ margin-right:10px; }
 }

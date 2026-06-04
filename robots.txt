@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /service-template.html
+
+Sitemap: https://transfoline.com.pk/sitemap.xml

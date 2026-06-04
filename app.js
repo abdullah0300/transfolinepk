@@ -67,7 +67,29 @@
       if (firstErr) firstErr.focus();
       return;
     }
-    form.classList.add('sent');
+
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (res) {
+      if (res.ok) {
+        form.classList.add('sent');
+        form.reset();
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = 'Send Request <span class="ar">→</span>';
+        alert('Something went wrong. Please call us at 0314 4641288.');
+      }
+    }).catch(function () {
+      btn.disabled = false;
+      btn.innerHTML = 'Send Request <span class="ar">→</span>';
+      alert('Network error. Please call us at 0314 4641288.');
+    });
   });
 
   form.addEventListener('input', function (e) {

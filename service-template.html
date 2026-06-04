@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>{{PAGE_TITLE}} — TransfoLine</title>
+<meta name="description" content="{{META_DESCRIPTION}}">
+<meta name="keywords" content="{{META_KEYWORDS}}">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="TransfoLine">
+<link rel="canonical" href="https://transfoline.com.pk/{{PAGE_SLUG}}.html">
+
+<!-- Geo / Language -->
+<meta name="geo.region" content="PK-PB">
+<meta name="geo.placename" content="Lahore">
+<meta name="geo.position" content="31.4504;74.3587">
+<meta name="ICBM" content="31.4504, 74.3587">
+<meta name="language" content="English">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TransfoLine">
+<meta property="og:title" content="{{OG_TITLE}}">
+<meta property="og:description" content="{{OG_DESCRIPTION}}">
+<meta property="og:url" content="https://transfoline.com.pk/{{PAGE_SLUG}}.html">
+<meta property="og:image" content="https://transfoline.com.pk/images/{{OG_IMAGE}}">
+<meta property="og:locale" content="en_PK">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{TWITTER_TITLE}}">
+<meta name="twitter:description" content="{{TWITTER_DESCRIPTION}}">
+<meta name="twitter:image" content="https://transfoline.com.pk/images/{{OG_IMAGE}}">
+
+<!-- Structured Data: Service -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{SERVICE_NAME}}",
+  "description": "{{SERVICE_SCHEMA_DESCRIPTION}}",
+  "provider": {
+    "@type": "ElectricalContractor",
+    "name": "TransfoLine",
+    "url": "https://transfoline.com.pk",
+    "telephone": "+92-314-4641288",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Raiwind Road",
+      "addressLocality": "Lahore",
+      "addressRegion": "Punjab",
+      "addressCountry": "PK"
+    }
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Pakistan"
+  },
+  "serviceType": "{{SERVICE_TYPE}}"
+}
+</script>
+
+<!-- Structured Data: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://transfoline.com.pk/"},
+    {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://transfoline.com.pk/#services"},
+    {"@type": "ListItem", "position": 3, "name": "{{BREADCRUMB_NAME}}"}
+  ]
+}
+</script>
+
+<!-- Structured Data: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "{{FAQ_Q1}}",
+      "acceptedAnswer": {"@type": "Answer", "text": "{{FAQ_A1}}"}
+    },
+    {
+      "@type": "Question",
+      "name": "{{FAQ_Q2}}",
+      "acceptedAnswer": {"@type": "Answer", "text": "{{FAQ_A2}}"}
+    },
+    {
+      "@type": "Question",
+      "name": "{{FAQ_Q3}}",
+      "acceptedAnswer": {"@type": "Answer", "text": "{{FAQ_A3}}"}
+    },
+    {
+      "@type": "Question",
+      "name": "{{FAQ_Q4}}",
+      "acceptedAnswer": {"@type": "Answer", "text": "{{FAQ_A4}}"}
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="sheet nav__in">
+    <a href="index.html" class="brand" aria-label="TransfoLine home">
+      <img src="images/transfo line.png" alt="TransfoLine" class="brand__logo">
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="index.html#why">Why Us</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="nav__right">
+      <a href="tel:+923144641288" class="nav__tel"><span class="sq" aria-hidden="true"></span>0314 4641288</a>
+      <a href="index.html#contact" class="btn btn--solid btn--sm">Get Quote</a>
+      <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="index.html#why">Why Us</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#process">Process</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="index.html#contact" class="btn btn--solid">Get Wholesale Quote</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ BREADCRUMB ============ -->
+<div class="sheet">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <a href="index.html#services">Services</a>
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <span aria-current="page">{{BREADCRUMB_NAME}}</span>
+  </nav>
+</div>
+
+<!-- ============ SERVICE HERO ============ -->
+<section class="svc-hero">
+  <div class="sheet">
+    <div class="svc-hero__top">
+      <div class="svc-hero__label"><span class="sq" aria-hidden="true"></span>{{SERVICE_LABEL}}</div>
+      <h1>{{HERO_H1}}</h1>
+      <div class="svc-hero__row">
+        <p class="svc-hero__sub">{{HERO_SUB}}</p>
+        <div class="svc-hero__side">
+          <div class="svc-hero__specs">
+            <span class="spec">{{SPEC_1}}</span>
+            <span class="spec">{{SPEC_2}}</span>
+            <span class="spec">{{SPEC_3}}</span>
+            <span class="spec">{{SPEC_4}}</span>
+          </div>
+          <div class="svc-hero__cta">
+            <a href="index.html#contact" class="btn btn--solid">{{CTA_PRIMARY}} <span class="ar">→</span></a>
+            <a href="tel:+923144641288" class="tlink">Call 0314 4641288 <span class="ar">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="svc-hero__banner">
+    <img src="images/{{HERO_IMAGE}}" alt="{{HERO_IMAGE_ALT}}">
+  </div>
+  <div class="sheet">
+    <div class="plate-strip">
+      <div class="pcell"><div class="k">{{STAT_1_LABEL}}</div><div class="v">{{STAT_1_VALUE}}</div></div>
+      <div class="pcell"><div class="k">{{STAT_2_LABEL}}</div><div class="v">{{STAT_2_VALUE}}</div></div>
+      <div class="pcell"><div class="k">{{STAT_3_LABEL}}</div><div class="v">{{STAT_3_VALUE}}</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY / BENEFITS ============ -->
+<section class="section" id="benefits">
+  <div class="sheet section__pad">
+    <div class="shead reveal">
+      <span class="shead__ix">01</span>
+      <div class="shead__t">
+        <span class="lab"><span class="dot" aria-hidden="true"></span>&nbsp;&nbsp;{{BENEFITS_KICKER}}</span>
+        <h2 class="h2">{{BENEFITS_H2}}</h2>
+        <p class="lede">{{BENEFITS_LEDE}}</p>
+      </div>
+    </div>
+    <div class="reg reveal">
+      <div class="reg__row">
+        <span class="reg__ix">B.01</span>
+        <span class="reg__t">{{BENEFIT_1_TITLE}}</span>
+        <span class="reg__d">{{BENEFIT_1_DESC}}</span>
+        <span class="reg__k">{{BENEFIT_1_TAG}}</span>
+      </div>
+      <div class="reg__row">
+        <span class="reg__ix">B.02</span>
+        <span class="reg__t">{{BENEFIT_2_TITLE}}</span>
+        <span class="reg__d">{{BENEFIT_2_DESC}}</span>
+        <span class="reg__k">{{BENEFIT_2_TAG}}</span>
+      </div>
+      <div class="reg__row">
+        <span class="reg__ix">B.03</span>
+        <span class="reg__t">{{BENEFIT_3_TITLE}}</span>
+        <span class="reg__d">{{BENEFIT_3_DESC}}</span>
+        <span class="reg__k">{{BENEFIT_3_TAG}}</span>
+      </div>
+      <div class="reg__row">
+        <span class="reg__ix">B.04</span>
+        <span class="reg__t">{{BENEFIT_4_TITLE}}</span>
+        <span class="reg__d">{{BENEFIT_4_DESC}}</span>
+        <span class="reg__k">{{BENEFIT_4_TAG}}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICE DETAILS ============ -->
+<section class="section" id="details">
+  <div class="sheet section__pad">
+    <div class="shead reveal">
+      <span class="shead__ix">02</span>
+      <div class="shead__t">
+        <span class="lab"><span class="dot" aria-hidden="true"></span>&nbsp;&nbsp;{{DETAILS_KICKER}}</span>
+        <h2 class="h2">{{DETAILS_H2}}</h2>
+      </div>
+    </div>
+    <div class="svc-detail reveal">
+      <div class="svc-detail__block">
+        <span class="svc-detail__icon">01</span>
+        <h3>{{DETAIL_1_TITLE}}</h3>
+        <p>{{DETAIL_1_DESC}}</p>
+      </div>
+      <div class="svc-detail__block">
+        <span class="svc-detail__icon">02</span>
+        <h3>{{DETAIL_2_TITLE}}</h3>
+        <p>{{DETAIL_2_DESC}}</p>
+      </div>
+    </div>
+    <div class="svc-detail reveal" style="border-top:none;">
+      <div class="svc-detail__block">
+        <span class="svc-detail__icon">03</span>
+        <h3>{{DETAIL_3_TITLE}}</h3>
+        <p>{{DETAIL_3_DESC}}</p>
+      </div>
+      <div class="svc-detail__block">
+        <span class="svc-detail__icon">04</span>
+        <h3>{{DETAIL_4_TITLE}}</h3>
+        <p>{{DETAIL_4_DESC}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section" id="process">
+  <div class="sheet section__pad">
+    <div class="shead reveal">
+      <span class="shead__ix">03</span>
+      <div class="shead__t">
+        <span class="lab"><span class="dot" aria-hidden="true"></span>&nbsp;&nbsp;Procedure</span>
+        <h2 class="h2">{{PROCESS_H2}}</h2>
+        <p class="lede">{{PROCESS_LEDE}}</p>
+      </div>
+    </div>
+    <ol class="proc reveal">
+      <li class="pstep">
+        <span class="pstep__n">01</span>
+        <span class="pstep__tag">{{STEP_1_TAG}}</span>
+        <h4>{{STEP_1_TITLE}}</h4>
+        <p>{{STEP_1_DESC}}</p>
+      </li>
+      <li class="pstep">
+        <span class="pstep__n">02</span>
+        <span class="pstep__tag">{{STEP_2_TAG}}</span>
+        <h4>{{STEP_2_TITLE}}</h4>
+        <p>{{STEP_2_DESC}}</p>
+      </li>
+      <li class="pstep">
+        <span class="pstep__n">03</span>
+        <span class="pstep__tag">{{STEP_3_TAG}}</span>
+        <h4>{{STEP_3_TITLE}}</h4>
+        <p>{{STEP_3_DESC}}</p>
+      </li>
+      <li class="pstep">
+        <span class="pstep__n">04</span>
+        <span class="pstep__tag">{{STEP_4_TAG}}</span>
+        <h4>{{STEP_4_TITLE}}</h4>
+        <p>{{STEP_4_DESC}}</p>
+      </li>
+    </ol>
+    <div class="proc-foot reveal">
+      <a href="index.html#contact" class="btn btn--solid">{{CTA_PRIMARY}} <span class="ar">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="sheet section__pad">
+    <div class="faq-grid">
+      <div class="reveal">
+        <span class="shead__ix" style="color:var(--accent-ink);font-family:var(--mono);font-size:12px;">04</span>
+        <span class="lab" style="display:block;margin:14px 0 14px;"><span class="dot" aria-hidden="true"></span>&nbsp;&nbsp;Answers</span>
+        <h2 class="h2">{{FAQ_H2}}</h2>
+        <p class="lede">Common questions about {{SERVICE_NAME_LOWER}}. Call us for anything else.</p>
+      </div>
+      <div class="faq-list reveal" id="faqList">
+        <details class="faq"><summary>{{FAQ_Q1}}<span class="faq__s" aria-hidden="true"></span></summary><p class="faq__a">{{FAQ_A1}}</p></details>
+        <details class="faq"><summary>{{FAQ_Q2}}<span class="faq__s" aria-hidden="true"></span></summary><p class="faq__a">{{FAQ_A2}}</p></details>
+        <details class="faq"><summary>{{FAQ_Q3}}<span class="faq__s" aria-hidden="true"></span></summary><p class="faq__a">{{FAQ_A3}}</p></details>
+        <details class="faq"><summary>{{FAQ_Q4}}<span class="faq__s" aria-hidden="true"></span></summary><p class="faq__a">{{FAQ_A4}}</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="svc-cta">
+  <div class="sheet svc-cta__inner">
+    <div class="svc-cta__text">
+      <h2>{{CTA_H2}}</h2>
+      <p>{{CTA_SUB}}</p>
+    </div>
+    <div class="svc-hero__cta">
+      <a href="index.html#contact" class="btn btn--solid">{{CTA_PRIMARY}} <span class="ar">→</span></a>
+      <a href="tel:+923144641288" class="tlink">Call 0314 4641288 <span class="ar">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RELATED SERVICES ============ -->
+<section class="section related" id="related">
+  <div class="sheet section__pad">
+    <div class="shead reveal">
+      <span class="shead__ix">05</span>
+      <div class="shead__t">
+        <span class="lab"><span class="dot" aria-hidden="true"></span>&nbsp;&nbsp;More Services</span>
+        <h2 class="h2">Other solutions we offer.</h2>
+      </div>
+    </div>
+    <div class="related__grid reveal">
+      {{RELATED_SERVICES}}
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="sheet">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <a href="index.html" class="brand"><img src="images/transfo line.png" alt="TransfoLine" class="brand__logo1"></a>
+        <p>Wholesale supplier of new &amp; used transformers — sale, purchase and repair of every brand. Serving Pakistan's factories since 2008.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Services</h4>
+        <div class="footer__links">
+          <a href="new-used-transformers.html">New &amp; used transformers</a>
+          <a href="transformer-repair.html">Transformer repair</a>
+          <a href="oil-dehydration.html">Oil dehydration</a>
+          <a href="town-electrification.html">Town electrification</a>
+          <a href="ht-lt-panel-installation.html">HT / LT panels</a>
+          <a href="spare-parts.html">Spare parts</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <div class="footer__links">
+          <a href="tel:+923144641288">0314 4641288</a>
+          <a href="mailto:info@transfoline.com.pk">info@transfoline.com.pk</a>
+          <a href="index.html#contact">Raiwind Road, Lahore</a>
+          <a href="index.html#faq">FAQ</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>&copy; 2026 TransfoLine</span>
+      <span>Designed &amp; Developed by <a href="https://webcraftio.com" target="_blank" rel="noopener" class="footer__credit">WebCraftio</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLOAT ============ -->
+<a href="https://wa.me/923144641288" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="none"><path d="M16.004 2.667A13.28 13.28 0 0 0 2.73 15.942a13.2 13.2 0 0 0 1.79 6.628L2.667 29.333l6.96-1.825A13.28 13.28 0 0 0 16.004 29.3 13.32 13.32 0 1 0 16.004 2.667Zm0 24.32a11 11 0 0 1-5.61-1.535l-.402-.24-4.17 1.094 1.113-4.07-.262-.418a10.96 10.96 0 0 1-1.684-5.876A11.02 11.02 0 1 1 16.004 26.987Zm6.044-8.244c-.332-.166-1.963-.968-2.267-1.08-.305-.11-.526-.166-.748.167s-.858 1.08-1.052 1.3c-.194.222-.387.25-.72.084a9.1 9.1 0 0 1-2.675-1.65 10 10 0 0 1-1.85-2.303c-.194-.333-.02-.513.146-.678.149-.15.332-.388.498-.582.166-.194.222-.333.332-.555.111-.222.056-.416-.028-.582s-.748-1.803-1.025-2.47c-.27-.648-.544-.56-.748-.57l-.637-.012a1.22 1.22 0 0 0-.886.416c-.305.333-1.163 1.136-1.163 2.77s1.19 3.213 1.357 3.435c.166.222 2.342 3.575 5.675 5.014.793.342 1.412.547 1.894.7.796.253 1.52.217 2.093.131.639-.095 1.963-.803 2.24-1.578.277-.775.277-1.44.194-1.578-.083-.139-.305-.222-.637-.389Z" fill="currentColor"/></svg>
+</a>
+
+<script>
+(function () {
+  'use strict';
+  var nav = document.getElementById('nav');
+  var burger = document.getElementById('burger');
+  burger.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.getElementById('mobileMenu').addEventListener('click', function (e) {
+    if (e.target.closest('a')) {
+      nav.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    }
+  });
+  var faqList = document.getElementById('faqList');
+  if (faqList) {
+    var faqs = Array.prototype.slice.call(faqList.querySelectorAll('.faq'));
+    faqs.forEach(function (d) {
+      d.addEventListener('toggle', function () {
+        if (d.open) faqs.forEach(function (o) { if (o !== d) o.open = false; });
+      });
+    });
+  }
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>

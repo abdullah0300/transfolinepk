@@ -513,5 +513,16 @@
   }
 })();
 </script>
+<!-- Google Ads click conversion tracking -->
+<script>
+document.addEventListener('click', function(e) {
+  var a = e.target.closest('a');
+  if (!a || typeof gtag !== 'function') return;
+  var href = a.getAttribute('href') || '';
+  if (href.indexOf('tel:') === 0 || href.indexOf('mailto:') === 0) {
+    gtag('event', 'conversion', {'send_to': 'AW-18209343983/LUpsCM_9orkcEO-T8upD'});
+  }
+});
+</script>
 </body>
 </html>

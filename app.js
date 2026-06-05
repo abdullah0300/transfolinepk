@@ -80,6 +80,7 @@
       if (res.ok) {
         form.classList.add('sent');
         form.reset();
+
       } else {
         btn.disabled = false;
         btn.innerHTML = 'Send Request <span class="ar">→</span>';

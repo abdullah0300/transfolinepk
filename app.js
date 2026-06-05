@@ -80,6 +80,9 @@
       if (res.ok) {
         form.classList.add('sent');
         form.reset();
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {'send_to': 'AW-18209343983/LUpsCM_9orkcEO-T8upD'});
+        }
       } else {
         btn.disabled = false;
         btn.innerHTML = 'Send Request <span class="ar">→</span>';

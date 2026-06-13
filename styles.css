@@ -343,6 +343,43 @@ h1,h2,h3,h4,p{margin:0;}
 @media(max-width:480px){.float-btns{bottom:20px;right:20px;gap:10px;}.call-float,.wa-float{width:50px;height:50px;}.call-float svg{width:24px;height:24px;}.wa-float svg{width:26px;height:26px;}}
 
 /* ============================================================
+   CONTACT PAGE — big call / WhatsApp actions + thank-you
+   ============================================================ */
+.contact-hero{border-bottom:1px solid var(--line);}
+.contact-hero__in{padding:clamp(40px,5.5vw,72px) 0 clamp(32px,4vw,52px);}
+.contact-hero h1{font-family:var(--cond);font-weight:600;font-size:clamp(32px,4.7vw,56px);line-height:1.03;letter-spacing:-.01em;max-width:20ch;}
+.contact-hero h1 em{font-style:normal;color:var(--accent-ink);}
+.contact-hero__sub{font-family:var(--mono);font-size:13.5px;line-height:1.75;color:var(--ink-2);margin-top:20px;max-width:54ch;letter-spacing:.01em;}
+
+.contact-actions{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:clamp(28px,3.5vw,40px);}
+.cbtn{display:flex;flex-direction:column;gap:6px;padding:clamp(22px,2.6vw,32px);border:1px solid var(--line-2);background:var(--card);
+  position:relative;min-height:158px;justify-content:center;transition:background .18s,color .18s,border-color .18s,transform .18s,box-shadow .18s;}
+.cbtn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.12);}
+.cbtn__ico{width:44px;height:44px;margin-bottom:10px;transition:color .18s;}
+.cbtn__ico svg{width:100%;height:100%;}
+.cbtn__lab{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);transition:color .18s;}
+.cbtn__val{font-family:var(--cond);font-weight:700;font-size:clamp(24px,3vw,32px);line-height:1;transition:color .18s;}
+.cbtn__sub{font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--ink-3);transition:color .18s;}
+.cbtn--call{border-color:#2563eb;}
+.cbtn--call .cbtn__ico{color:#2563eb;}
+.cbtn--call:hover{background:#2563eb;border-color:#2563eb;}
+.cbtn--wa{border-color:#25D366;}
+.cbtn--wa .cbtn__ico{color:#1ba94c;}
+.cbtn--wa:hover{background:#25D366;border-color:#25D366;}
+.cbtn:hover .cbtn__ico,.cbtn:hover .cbtn__lab,.cbtn:hover .cbtn__val,.cbtn:hover .cbtn__sub{color:#fff;}
+@media(max-width:620px){.contact-actions{grid-template-columns:1fr;}.cbtn{min-height:0;}}
+
+/* Thank-you page */
+.ty{border-bottom:1px solid var(--line);}
+.ty__in{padding:clamp(56px,8vw,120px) var(--gut);display:flex;flex-direction:column;align-items:center;text-align:center;}
+.ty__mk{width:74px;height:74px;border:2px solid var(--ok);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--ok);font-size:38px;line-height:1;margin-bottom:26px;}
+.ty__lab{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ok);margin-bottom:16px;}
+.ty h1{font-family:var(--cond);font-weight:600;font-size:clamp(30px,4.5vw,52px);line-height:1.04;letter-spacing:-.01em;max-width:18ch;}
+.ty p{font-size:clamp(15.5px,1.5vw,18px);color:var(--ink-2);max-width:52ch;margin-top:18px;line-height:1.6;}
+.ty__actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:34px;}
+@media(max-width:480px){.ty__actions{flex-direction:column;align-items:stretch;width:100%;}.ty__actions .btn{width:100%;justify-content:center;}}
+
+/* ============================================================
    SERVICE PAGES
    ============================================================ */
 

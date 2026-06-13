@@ -78,7 +78,10 @@
       headers: { 'Accept': 'application/json' }
     }).then(function (res) {
       if (res.ok) {
-        if (typeof gtag === 'function') { gtag('event', 'generate_lead', { 'form': 'homepage' }); }
+        if (typeof gtag === 'function') {
+          gtag('event', 'conversion', {'send_to': 'AW-18209343983/KyllCNzzsL4cEO-T8upD'});
+          gtag('event', 'generate_lead', { 'form': 'homepage' });
+        }
         form.classList.add('sent');
         form.reset();
 

@@ -9,12 +9,12 @@
   gtag('js', new Date());
   gtag('config', 'GT-MK4LGQ9D');
 
-  /* GA4 lead event fired on the thank-you page load.
-     This page is the conversion confirmation: set a GA4 key event on
-     "generate_lead", and in Google Ads create a conversion action for
-     account AW-18209343983 using "Page load" of /thank-you.html
-     (the Google tag above already delivers it — no extra label needed).
-     If you instead want an event-snippet conversion, paste it below. */
+  /* Google Ads conversion — "Submit lead form" (account AW-18209343983).
+     Fires on thank-you page load, which is reached after a successful
+     form submission on the contact page. */
+  gtag('event', 'conversion', {'send_to': 'AW-18209343983/KyllCNzzsL4cEO-T8upD'});
+
+  /* GA4 lead key event (mark "generate_lead" as a key event in GA4). */
   gtag('event', 'generate_lead', { 'page': 'thank_you' });
 </script>
 <!-- Microsoft Clarity -->

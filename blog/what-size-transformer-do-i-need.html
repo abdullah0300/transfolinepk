@@ -108,12 +108,12 @@
     {
       "@type": "Question",
       "name": "How do I calculate what KVA transformer I need?",
-      "acceptedAnswer": {"@type": "Answer", "text": "Add up the wattage of all equipment that can run simultaneously. Divide the total by your power factor (typically 0.8 for industrial loads) to get kVA. Then add a 20–25% safety margin and round up to the nearest standard KVA size. For example: 320 kW load Ã· 0.8 power factor = 400 kVA. With 25% margin, you need a 500 KVA transformer."}
+      "acceptedAnswer": {"@type": "Answer", "text": "Add up the wattage of all equipment that can run simultaneously. Divide the total by your power factor (typically 0.8 for industrial loads) to get kVA. Then add a 20–25% safety margin and round up to the nearest standard KVA size. For example: 320 kW load ÷ 0.8 power factor = 400 kVA. With 25% margin, you need a 500 KVA transformer."}
     },
     {
       "@type": "Question",
       "name": "What is the difference between KVA and KW in a transformer?",
-      "acceptedAnswer": {"@type": "Answer", "text": "KW (kilowatts) measures real, usable power — the actual work your equipment does. KVA (kilovolt-amperes) measures apparent power, which includes both real power and reactive power drawn by motors and inductive loads. Transformers are rated in KVA because they handle apparent power. To convert: KVA = KW Ã· Power Factor."}
+      "acceptedAnswer": {"@type": "Answer", "text": "KW (kilowatts) measures real, usable power — the actual work your equipment does. KVA (kilovolt-amperes) measures apparent power, which includes both real power and reactive power drawn by motors and inductive loads. Transformers are rated in KVA because they handle apparent power. To convert: KVA = KW ÷ Power Factor."}
     },
     {
       "@type": "Question",
@@ -246,9 +246,9 @@
       <tr><th>Formula</th><th>Example</th></tr>
     </thead>
     <tbody>
-      <tr><td>KVA = KW Ã· Power Factor</td><td>400 KW Ã· 0.8 = 500 KVA</td></tr>
+      <tr><td>KVA = KW ÷ Power Factor</td><td>400 KW ÷ 0.8 = 500 KVA</td></tr>
       <tr><td>KW = KVA × Power Factor</td><td>500 KVA × 0.8 = 400 KW</td></tr>
-      <tr><td>Power Factor = KW Ã· KVA</td><td>400 KW Ã· 500 KVA = 0.8</td></tr>
+      <tr><td>Power Factor = KW ÷ KVA</td><td>400 KW ÷ 500 KVA = 0.8</td></tr>
     </tbody>
   </table>
 
@@ -326,7 +326,7 @@
 
   <p>Divide your maximum demand by the power factor to get the required KVA. Then add a <strong>20–25% safety margin</strong> to accommodate motor starting currents, future load additions, and operational flexibility:</p>
 
-  <p><em>46.1 kW Ã· 0.82 (power factor) = 56.2 KVA<br>
+  <p><em>46.1 kW ÷ 0.82 (power factor) = 56.2 KVA<br>
   With 25% margin: 56.2 × 1.25 = <strong>70.2 KVA</strong><br>
   → Select next standard size up: <strong>100 KVA transformer</strong></em></p>
 
@@ -499,10 +499,10 @@
   <h2 id="faq">Frequently Asked Questions</h2>
 
   <h3>How do I calculate what KVA transformer I need?</h3>
-  <p>Add up the kW rating of all equipment that can run simultaneously, apply your demand factor (typically 0.65–0.85 for industrial facilities), divide by your power factor (use 0.8 if unknown), then add a 25% safety margin. Round up to the next standard KVA size. For example: 200 kW connected load × 0.75 demand factor = 150 kW maximum demand. 150 kW Ã· 0.8 power factor = 187.5 KVA. With 25% margin: 234 KVA. Select the next standard size: <strong>250 KVA transformer</strong>.</p>
+  <p>Add up the kW rating of all equipment that can run simultaneously, apply your demand factor (typically 0.65–0.85 for industrial facilities), divide by your power factor (use 0.8 if unknown), then add a 25% safety margin. Round up to the next standard KVA size. For example: 200 kW connected load × 0.75 demand factor = 150 kW maximum demand. 150 kW ÷ 0.8 power factor = 187.5 KVA. With 25% margin: 234 KVA. Select the next standard size: <strong>250 KVA transformer</strong>.</p>
 
   <h3>What is the difference between KVA and KW in a transformer?</h3>
-  <p>KW is real power — the actual work your equipment does. KVA is apparent power — the total electrical load the transformer supplies, including the reactive power drawn by motors and inductive equipment. Transformers are rated in KVA because they handle both. To convert: KVA = KW Ã· Power Factor. For a mixed industrial load, use a power factor of 0.8 as a starting point.</p>
+  <p>KW is real power — the actual work your equipment does. KVA is apparent power — the total electrical load the transformer supplies, including the reactive power drawn by motors and inductive equipment. Transformers are rated in KVA because they handle both. To convert: KVA = KW ÷ Power Factor. For a mixed industrial load, use a power factor of 0.8 as a starting point.</p>
 
   <h3>Is it better to oversize or undersize a transformer?</h3>
   <p>Always oversize — never undersize. An undersized transformer runs hot, its insulation ages rapidly, and it will fail early. A moderately oversized transformer (by 20–30%) runs cool, has a longer service life, and accommodates load growth. Extreme oversizing (more than double the load) does reduce efficiency at low loads, but it is still preferable to undersizing. When in doubt, go to the next size up.</p>
@@ -526,7 +526,7 @@
   <!-- Post Navigation -->
   <nav class="post-nav" aria-label="More articles">
     <a href="transformer-oil-dehydration-guide.html">
-      <span class="post-nav__label">â† Previous</span>
+      <span class="post-nav__label">← Previous</span>
       <span class="post-nav__title">Transformer Oil Dehydration Guide</span>
     </a>
     <a href="transformer-maintenance-checklist.html" style="text-align:right;">

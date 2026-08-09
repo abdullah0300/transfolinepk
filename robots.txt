@@ -1,6 +1,28 @@
+# General crawlers
 User-agent: *
 Allow: /
-
 Disallow: /service-template.html
+
+# AI Search Retrieval Bots (GEO — must allow for citations)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
 
 Sitemap: https://transfoline.com.pk/sitemap.xml

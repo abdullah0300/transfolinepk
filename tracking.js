@@ -19,3 +19,26 @@
     }
   }, true);
 })();
+
+/* Mobile Nav Services Dropdown Toggle */
+(function () {
+  'use strict';
+  function attach() {
+    var btn = document.getElementById('mobileServicesBtn');
+    var menu = document.getElementById('mobileServicesMenu');
+    if (btn && menu && !btn.dataset.attached) {
+      btn.dataset.attached = 'true';
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = menu.classList.toggle('open');
+        btn.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', attach);
+  } else {
+    attach();
+  }
+})();

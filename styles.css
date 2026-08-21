@@ -360,18 +360,125 @@ h1,h2,h3,h4,p{margin:0;}
 .footer__credit:hover{border-color:var(--accent);}
 
 /* ============================================================
-   WHATSAPP FLOATING BUTTON
+   CORNER FLOATING BUTTONS (CIRCULAR CALL & WHATSAPP)
    ============================================================ */
-.float-btns{position:fixed;bottom:28px;right:28px;z-index:90;display:flex;flex-direction:column;gap:12px;align-items:center;}
+.float-btns{position:fixed;bottom:28px;right:28px;z-index:990;display:flex;flex-direction:column;gap:12px;align-items:center;}
 .call-float{width:56px;height:56px;border-radius:50%;background:#2563eb;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.18);transition:transform .2s,box-shadow .2s;text-decoration:none;}
-.call-float:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(0,0,0,.25);}
+.call-float:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(0,0,0,.25);color:#fff;}
 .call-float svg{width:28px;height:28px;}
-.wa-float{width:56px;height:56px;border-radius:50%;
-  background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 4px 14px rgba(0,0,0,.2);transition:transform .2s,box-shadow .2s;}
-.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(0,0,0,.25);}
+.wa-float{width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.2);transition:transform .2s,box-shadow .2s;text-decoration:none;}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(0,0,0,.25);color:#fff;}
 .wa-float svg{width:30px;height:30px;}
-@media(max-width:480px){.float-btns{bottom:20px;right:20px;gap:10px;}.call-float,.wa-float{width:50px;height:50px;}.call-float svg{width:24px;height:24px;}.wa-float svg{width:26px;height:26px;}}
+@media(max-width:480px){
+  .float-btns{bottom:20px;right:16px;gap:10px;}
+  .call-float,.wa-float{width:48px;height:48px;}
+  .call-float svg{width:24px;height:24px;}
+  .wa-float svg{width:26px;height:26px;}
+}
+
+/* ============================================================
+   PROMINENT STICKY BOTTOM CALL BUTTON / BAR
+   ============================================================ */
+.bottom-call-bar{
+  position:fixed;bottom:24px;left:24px;z-index:995;pointer-events:none;
+}
+.bottom-call-btn{
+  pointer-events:auto;display:inline-flex;align-items:center;gap:14px;
+  padding:8px 10px 8px 12px;background:#17140F;
+  border:1.5px solid rgba(221,84,28,0.45);border-radius:9999px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.35),0 0 0 1px rgba(255,255,255,0.08);
+  text-decoration:none;color:#FBFAF5;
+  transition:transform .2s cubic-bezier(0.16,1,0.3,1),box-shadow .2s ease,border-color .2s ease;
+  position:relative;user-select:none;
+}
+.bottom-call-btn:hover{
+  transform:translateY(-3px) scale(1.02);
+  border-color:var(--accent);
+  box-shadow:0 14px 36px rgba(221,84,28,0.28),0 0 0 1px var(--accent);
+  color:#FBFAF5;
+}
+.bottom-call-btn__icon{
+  width:42px;height:42px;border-radius:50%;
+  background:linear-gradient(135deg, #DD541C 0%, #B8430F 100%);
+  color:#ffffff;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;box-shadow:0 3px 10px rgba(221,84,28,0.4);position:relative;
+}
+.bottom-call-btn__icon svg{width:22px;height:22px;display:block;}
+.bottom-call-btn__icon::after{
+  content:"";position:absolute;inset:-4px;border-radius:50%;
+  border:2px solid rgba(221,84,28,0.7);
+  animation:callBeacon 2s cubic-bezier(0.24,0,0.38,1) infinite;
+  pointer-events:none;
+}
+@keyframes callBeacon{
+  0%{transform:scale(0.9);opacity:1;}
+  70%{transform:scale(1.4);opacity:0;}
+  100%{transform:scale(1.4);opacity:0;}
+}
+.bottom-call-btn__text{
+  display:flex;flex-direction:column;line-height:1.15;text-align:left;
+}
+.bottom-call-btn__tag{
+  font-family:var(--sans);font-size:11px;font-weight:600;
+  text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-3);
+  display:flex;align-items:center;gap:6px;
+}
+.bottom-call-btn__dot{
+  width:6px;height:6px;border-radius:50%;background:#22c55e;
+  display:inline-block;box-shadow:0 0 6px #22c55e;
+  animation:liveGlow 1.5s ease-in-out infinite alternate;
+}
+@keyframes liveGlow{
+  from{opacity:0.6;transform:scale(0.9);}
+  to{opacity:1;transform:scale(1.2);}
+}
+.bottom-call-btn__number{
+  font-family:var(--mono);font-size:17px;font-weight:700;
+  letter-spacing:0.04em;color:#ffffff;white-space:nowrap;
+}
+.bottom-call-btn__action{
+  font-family:var(--sans);font-size:12.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.06em;
+  background:rgba(221,84,28,0.18);color:#ff8c5a;
+  border:1px solid rgba(221,84,28,0.4);padding:8px 14px;
+  border-radius:9999px;display:inline-flex;align-items:center;
+  gap:4px;margin-left:6px;
+  transition:background .18s ease,color .18s ease,transform .18s ease;
+}
+.bottom-call-btn:hover .bottom-call-btn__action{
+  background:#DD541C;color:#ffffff;border-color:#DD541C;
+}
+.bottom-call-btn__arr{font-size:14px;transition:transform .18s ease;}
+.bottom-call-btn:hover .bottom-call-btn__arr{transform:translateX(3px);}
+
+@media(max-width:768px){
+  /* Hide the old circular call icon on mobile so only the new prominent call button is shown */
+  .call-float{display:none !important;}
+  .float-btns{bottom:16px;right:14px;gap:0;}
+  .wa-float{width:46px;height:46px;}
+  .wa-float svg{width:25px;height:25px;}
+
+  /* Responsive styling for prominent bottom call bar */
+  .bottom-call-bar{bottom:16px;left:14px;max-width:calc(100vw - 78px);}
+  .bottom-call-btn{gap:9px;padding:6px 12px 6px 7px;}
+  .bottom-call-btn__action{display:none;}
+  .bottom-call-btn__icon{width:34px;height:34px;}
+  .bottom-call-btn__icon svg{width:17px;height:17px;}
+  .bottom-call-btn__tag{font-size:9.5px;}
+  .bottom-call-btn__number{font-size:14.5px;}
+}
+@media(max-width:380px){
+  .float-btns{bottom:12px;right:10px;}
+  .wa-float{width:40px;height:40px;}
+  .wa-float svg{width:22px;height:22px;}
+
+  .bottom-call-bar{bottom:12px;left:8px;max-width:calc(100vw - 66px);}
+  .bottom-call-btn{padding:5px 9px 5px 5px;gap:6px;}
+  .bottom-call-btn__icon{width:28px;height:28px;}
+  .bottom-call-btn__icon svg{width:14px;height:14px;}
+  .bottom-call-btn__tag{font-size:9px;}
+  .bottom-call-btn__number{font-size:13px;}
+}
 
 /* ============================================================
    CONTACT PAGE — big call / WhatsApp actions + thank-you

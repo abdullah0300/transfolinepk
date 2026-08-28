@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GT-MK4LGQ9D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'GT-MK4LGQ9D');
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x1wrvodwit");
+</script>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="/images/transfoline_logo-removebg-preview.png">
+<link rel="apple-touch-icon" href="/images/transfoline_logo-removebg-preview.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="TransfoLine Engineering Division">
+<meta name="geo.region" content="PK-PB">
+<meta name="geo.placename" content="Lahore">
+<meta name="geo.position" content="31.4504;74.3587">
+<meta name="ICBM" content="31.4504, 74.3587">
+<meta name="language" content="English">
+<link rel="stylesheet" href="styles.css">
+
+<title>Induction Furnace Transformer Calculator | MVA Sizing</title>
+<meta name="description" content="Calculate induction melting furnace power (kW) and transformer rating (MVA) in Pakistan. Sizing for 0.5T to 15T steel furnaces with harmonic K-factor specs.">
+<meta name="keywords" content="induction furnace transformer kva calculation, 1 ton induction furnace power requirement, furnace transformer sizing formula, k factor transformer for induction furnace, ofwf furnace transformer sizing pakistan">
+<link rel="canonical" href="https://transfoline.com.pk/induction-furnace-transformer-calculator.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Induction Furnace Transformer Calculator | Steel Mills">
+<meta property="og:description" content="Calculate induction furnace melting power (kW), transformer rating (MVA), and OFWF cooling specs for steel melting plants in Pakistan.">
+<meta property="og:url" content="https://transfoline.com.pk/induction-furnace-transformer-calculator.html">
+<meta property="og:image" content="https://transfoline.com.pk/images/transfoline-400kva-transformer.webp">
+
+<!-- Schema JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "TransfoLine Induction Furnace Transformer Sizing Calculator",
+  "url": "https://transfoline.com.pk/induction-furnace-transformer-calculator.html",
+  "applicationCategory": "EngineeringApplication",
+  "operatingSystem": "All",
+  "description": "Induction melting furnace power (kW) and heavy-duty OFWF transformer MVA sizing calculator for steel melting plants in Pakistan.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PKR" },
+  "provider": {
+    "@type": "ElectricalContractor",
+    "name": "TransfoLine (Private) Limited",
+    "telephone": "+923144641288"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What transformer MVA is required for a 1-Ton steel induction furnace in Pakistan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard 1-Ton mild steel induction furnace consuming ~550 kWh/ton with a 60-minute heat cycle requires approximately 550 kW active power and a 750 kVA to 1000 kVA (1 MVA) heavy-duty furnace transformer with K-13 rating and OFWF heat exchangers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do induction furnaces require special K-Factor transformers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SCR/IGBT furnace rectifiers generate severe non-linear harmonic currents (5th, 7th, 11th). Standard transformers overheat rapidly under harmonic loads. TransfoLine builds furnace transformers with K-13/K-20 ratings and reinforced mechanical clamping to withstand high cyclic electro-dynamic stresses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the power requirement for a 5-Ton steel melting furnace?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 5-Ton furnace with a 60-minute melting cycle requires approximately 2,750 kW of active furnace power and a 3.15 MVA to 3.5 MVA heavy-duty OFWF transformer."
+      }
+    }
+  ]
+}
+</script>
+<style>
+  /* Calculator Dedicated Page Responsive CSS */
+  .calc-box {
+    background: var(--card);
+    border: 1px solid var(--line-2);
+    padding: clamp(16px, 3vw, 36px);
+    margin-bottom: 40px;
+  }
+  .calc-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .calc-input-group { margin-bottom: 18px; }
+  .calc-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    margin-bottom: 8px;
+    letter-spacing: .05em;
+  }
+  .calc-input {
+    width: 100%;
+    padding: 11px 14px;
+    background: var(--paper);
+    border: 1px solid var(--line-2);
+    color: var(--ink);
+    font-size: 15px;
+    font-family: var(--mono);
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+  .calc-input:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  select.calc-input {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%2317140f'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 32px;
+  }
+  .calc-radio-group {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .calc-radio-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13.5px;
+    cursor: pointer;
+    font-family: var(--sans);
+    padding: 6px 10px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    transition: all .15s ease;
+  }
+  .calc-results-card {
+    background: var(--paper-2);
+    border: 1px solid var(--line-2);
+    padding: clamp(16px, 2.5vw, 24px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .calc-res-item {
+    border-bottom: 1px solid var(--line);
+    padding: 10px 0;
+  }
+  .calc-res-item:last-child { border-bottom: none; }
+  .calc-res-lbl {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    display: block;
+    margin-bottom: 2px;
+  }
+  .calc-res-val {
+    font-family: var(--cond);
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 700;
+    color: var(--accent-ink);
+    word-break: break-word;
+  }
+  .calc-res-val.highlight-green { color: var(--ok); }
+  .calc-res-val.highlight-ink { color: var(--ink); font-size: clamp(17px, 2.2vw, 20px); }
+  .calc-desc-box {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 13.5px;
+    color: var(--ink-2);
+    line-height: 1.6;
+    overflow-wrap: break-word;
+  }
+  .calc-formula-pill {
+    display: inline-block;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 6px 12px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent-ink);
+    margin: 6px 0 10px;
+    font-weight: 600;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .calc-hub-nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0 32px;
+    padding: 14px 18px;
+    background: var(--card);
+    border: 1px solid var(--line-2);
+  }
+  .calc-hub-nav a {
+    font-family: var(--mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-2);
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    transition: all .15s ease;
+  }
+  .calc-hub-nav a:hover, .calc-hub-nav a.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+  .tech-matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 13.5px;
+  }
+  .tech-matrix-table th, .tech-matrix-table td {
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    text-align: left;
+  }
+  .tech-matrix-table th {
+    background: var(--paper-2);
+    font-family: var(--mono);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+  }
+
+  @media (max-width: 860px) {
+    .calc-inner { grid-template-columns: 1fr; gap: 20px; }
+  }
+  @media (max-width: 640px) {
+    .calc-box { padding: 16px 12px; margin-bottom: 24px; }
+    .calc-results-card { padding: 16px 12px; }
+    .calc-radio-group { flex-direction: column; gap: 6px; }
+    .calc-radio-label { width: 100%; }
+    .calc-quote-btn { width: 100%; justify-content: center; text-align: center; }
+    .calc-hub-nav { flex-direction: column; }
+    .tech-matrix-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  }
+</style>
+
+</head>
+<body>
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="sheet nav__in">
+    <a href="index.html" class="brand" aria-label="TransfoLine home">
+      <img src="images/transfoline-logo.webp" alt="TransfoLine" class="brand__logo">
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="index.html#why">Why Us</a>
+      <div class="nav__dropdown">
+        <a href="index.html#services" class="nav__drop-trigger">Services <span class="nav__arrow">▾</span></a>
+        <div class="nav__drop-menu mega-menu">
+          <!-- COLUMN 1: TRANSFORMERS -->
+          <div class="mega-col">
+            <div class="mega-col__title">Transformers</div>
+            <div class="mega-col__list">
+              <a href="new-used-transformers.html" class="mega-link">New &amp; Certified-Used Transformers</a>
+              <a href="solar-inverter-transformers-epc.html" class="mega-link">Solar Inverter Step-Up Transformers</a>
+              <a href="steel-furnace-transformers.html" class="mega-link">Steel Furnace Transformers (OFWF)</a>
+              <a href="dry-type-cast-resin-transformers.html" class="mega-link">Cast Resin Dry-Type Transformers</a>
+              <a href="high-voltage-power-transformers.html" class="mega-link">High-Voltage Power Transformers (MVA)</a>
+              <a href="spare-parts.html" class="mega-link">Transformer Spare Parts &amp; Supplies</a>
+            </div>
+          </div>
+
+          <!-- COLUMN 2: ENGINEERING SERVICES -->
+          <div class="mega-col">
+            <div class="mega-col__title">Engineering Services</div>
+            <div class="mega-col__list">
+              <a href="turnkey-substation-epc.html" class="mega-link">Turnkey Substation EPC (11kV/132kV)</a>
+              <a href="transformer-repair.html" class="mega-link">Transformer Repair &amp; Rewinding</a>
+              <a href="oil-dehydration.html" class="mega-link">Oil Dehydration &amp; BDV Filtration</a>
+              <a href="preventive-maintenance-amc.html" class="mega-link">Maintenance &amp; AMC Contracts</a>
+              <a href="ht-lt-panel-installation.html" class="mega-link">HT / LT Panel Installation</a>
+              <a href="town-electrification.html" class="mega-link">Town Electrification</a>
+            </div>
+          </div>
+
+          <!-- COLUMN 3: SOLAR & RENEWABLE -->
+          <div class="mega-col">
+            <div class="mega-col__title">Solar &amp; Renewable</div>
+            <div class="mega-col__list">
+              <a href="solar-energy-solutions.html" class="mega-link">Commercial &amp; Industrial Solar EPC</a>
+              <a href="solar-panels-inverters-cables.html" class="mega-link">Solar Panels, Inverters &amp; Cables</a>
+              <a href="100kw-solar-system-price-pakistan.html" class="mega-link">100 kW Commercial System</a>
+              <a href="500kw-industrial-solar-system.html" class="mega-link">500 kW Industrial Substation</a>
+              <a href="1mw-solar-power-plant-pakistan.html" class="mega-link">1 MW to 5 MW Solar Power Plants</a>
+              <a href="ev-charging-solutions-pakistan.html" class="mega-link">Commercial EV Fast Charging</a>
+            </div>
+          </div>
+
+          <!-- COLUMN 4: TESTING & DIAGNOSTICS -->
+          <div class="mega-col">
+            <div class="mega-col__title">Testing &amp; Diagnostics</div>
+            <div class="mega-col__list">
+              <a href="insulation-resistance-testing.html" class="mega-link">Insulation Resistance Testing (Megger)</a>
+              <a href="transformer-testing.html" class="mega-link">Transformer Diagnostic Testing (DGA)</a>
+              <a href="high-voltage-testing.html" class="mega-link">High Voltage (Hipot) Testing</a>
+              <a href="protection-relay-testing.html" class="mega-link">Protection Relay Testing</a>
+              <a href="thermal-imaging.html" class="mega-link">Thermal Imaging Inspection (FLIR)</a>
+              <a href="circuit-breaker-testing.html" class="mega-link">Circuit Breaker Testing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="calculators.html" style="color:var(--accent-ink);font-weight:600;">Calculators</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="contact-us.html">Contact</a>
+    </nav>
+    <div class="nav__right">
+      <a href="tel:+923144641288" class="nav__tel"><span class="sq" aria-hidden="true"></span>0314 4641288</a>
+      <a href="contact-us.html" class="btn btn--solid btn--sm">Get Quote</a>
+      <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="mobileMenu">
+    <!-- Top Quick Links -->
+    <div class="nav__mobile-quick">
+      <a href="index.html" class="nav__mobile-item">Home</a>
+      <a href="index.html#why" class="nav__mobile-item">Why Us</a>
+      <a href="calculators.html" class="nav__mobile-item nav__mobile-item--featured">
+        <span>⚡ Engineering Calculators</span>
+        <span class="nav__mobile-pill">Interactive</span>
+      </a>
+      <a href="blog.html" class="nav__mobile-item">📰 Blog &amp; Knowledge Hub</a>
+    </div>
+
+    <!-- 4-Pillar Services Accordion Group -->
+    <div class="nav__mobile-section-title">Services &amp; Equipment</div>
+
+    <!-- 1. Transformers Pillar -->
+    <div class="nav__mob-accordion">
+      <button class="nav__mob-acc-trigger" aria-expanded="false">
+        <span class="nav__mob-acc-title">
+          <span class="nav__mob-acc-icon">⚡</span>
+          <span>Transformers</span>
+        </span>
+        <span class="nav__mob-acc-badge">6 Products <span class="nav__mob-arrow">▾</span></span>
+      </button>
+      <div class="nav__mob-acc-panel">
+        <a href="new-used-transformers.html">New &amp; Certified-Used Transformers</a>
+        <a href="solar-inverter-transformers-epc.html">Solar Inverter Step-Up Transformers</a>
+        <a href="steel-furnace-transformers.html">Steel Furnace Transformers (OFWF)</a>
+        <a href="dry-type-cast-resin-transformers.html">Cast Resin Dry-Type Transformers</a>
+        <a href="high-voltage-power-transformers.html">High-Voltage Power Transformers (MVA)</a>
+        <a href="spare-parts.html">Transformer Spare Parts &amp; Supplies</a>
+      </div>
+    </div>
+
+    <!-- 2. Engineering & Substation EPC Pillar -->
+    <div class="nav__mob-accordion">
+      <button class="nav__mob-acc-trigger" aria-expanded="false">
+        <span class="nav__mob-acc-title">
+          <span class="nav__mob-acc-icon">🛠️</span>
+          <span>Engineering Services</span>
+        </span>
+        <span class="nav__mob-acc-badge">6 Services <span class="nav__mob-arrow">▾</span></span>
+      </button>
+      <div class="nav__mob-acc-panel">
+        <a href="turnkey-substation-epc.html">Turnkey Substation EPC (11kV/132kV)</a>
+        <a href="transformer-repair.html">Transformer Repair &amp; Rewinding</a>
+        <a href="oil-dehydration.html">Oil Dehydration &amp; BDV Filtration</a>
+        <a href="preventive-maintenance-amc.html">Maintenance &amp; AMC Contracts</a>
+        <a href="ht-lt-panel-installation.html">HT / LT Panel Installation</a>
+        <a href="town-electrification.html">Town Electrification</a>
+      </div>
+    </div>
+
+    <!-- 3. Solar & Renewable Power Pillar -->
+    <div class="nav__mob-accordion">
+      <button class="nav__mob-acc-trigger" aria-expanded="false">
+        <span class="nav__mob-acc-title">
+          <span class="nav__mob-acc-icon">☀️</span>
+          <span>Solar &amp; Renewable</span>
+        </span>
+        <span class="nav__mob-acc-badge">6 Solutions <span class="nav__mob-arrow">▾</span></span>
+      </button>
+      <div class="nav__mob-acc-panel">
+        <a href="solar-energy-solutions.html">Commercial &amp; Industrial Solar EPC</a>
+        <a href="solar-panels-inverters-cables.html">Solar Hardware (Panels, Inverters, Cables)</a>
+        <a href="100kw-solar-system-price-pakistan.html">100 kW Commercial Solar System</a>
+        <a href="500kw-industrial-solar-system.html">500 kW Industrial Solar Substation</a>
+        <a href="1mw-solar-power-plant-pakistan.html">1 MW to 5 MW Solar Power Plants</a>
+        <a href="ev-charging-solutions-pakistan.html">Commercial EV Fast-Charging Stations</a>
+      </div>
+    </div>
+
+    <!-- 4. Testing & Diagnostics Pillar -->
+    <div class="nav__mob-accordion">
+      <button class="nav__mob-acc-trigger" aria-expanded="false">
+        <span class="nav__mob-acc-title">
+          <span class="nav__mob-acc-icon">🔬</span>
+          <span>Testing &amp; Diagnostics</span>
+        </span>
+        <span class="nav__mob-acc-badge">6 Tests <span class="nav__mob-arrow">▾</span></span>
+      </button>
+      <div class="nav__mob-acc-panel">
+        <a href="insulation-resistance-testing.html">Insulation Resistance Testing (Megger)</a>
+        <a href="transformer-testing.html">Transformer Diagnostic Testing (DGA)</a>
+        <a href="high-voltage-testing.html">High Voltage (Hipot) Testing</a>
+        <a href="protection-relay-testing.html">Protection Relay Testing</a>
+        <a href="thermal-imaging.html">Thermal Imaging Inspection (FLIR)</a>
+        <a href="circuit-breaker-testing.html">Circuit Breaker Testing</a>
+      </div>
+    </div>
+
+    <!-- Bottom Links -->
+    <div class="nav__mobile-quick" style="margin-top:6px;">
+      <a href="index.html#process" class="nav__mobile-item">Procedure &amp; Timeline</a>
+      <a href="index.html#faq" class="nav__mobile-item">FAQ</a>
+      <a href="contact-us.html" class="nav__mobile-item">Contact &amp; Regional Hubs</a>
+    </div>
+
+    <!-- Direct CTA Buttons -->
+    <div class="nav__mobile-ctas">
+      <a href="contact-us.html" class="btn btn--solid" style="width:100%;justify-content:center;">Get Wholesale Quote <span class="ar">→</span></a>
+      <a href="tel:+923144641288" class="nav__mobile-call"><span class="nav__mobile-call-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z" fill="currentColor"/></svg></span>Call Us: 0314 4641288</a>
+    </div>
+  </div>
+</header>
+
+
+<main id="main">
+  <div class="sheet">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb__sep">/</span>
+      <a href="calculators.html">Calculators Hub</a><span class="breadcrumb__sep">/</span>
+      <span aria-current="page">Induction Furnace Transformer Calculator</span>
+    </nav>
+  </div>
+
+  <section class="svc-hero">
+    <div class="sheet">
+      <div class="svc-hero__top">
+        <div class="svc-hero__label"><span class="sq" aria-hidden="true"></span>STEEL SECTOR HEAVY MVA SIZING · K-FACTOR &amp; OFWF COOLING</div>
+        <h1>Induction Furnace <em>Transformer Calculator</em></h1>
+        <div class="svc-hero__row">
+          <p class="svc-hero__sub">Calculate active melting power in kilowatts (kW), heavy-duty transformer MVA rating, harmonic K-factor specifications, and forced cooling systems for steel melting and foundry crucibles.</p>
+          <div class="svc-hero__side">
+            <div class="svc-hero__specs">
+              <span class="spec">0.5T TO 15T CRUCIBLES</span>
+              <span class="spec">K-13 &amp; K-20 RATINGS</span>
+              <span class="spec">OFWF HEAT EXCHANGERS</span>
+              <span class="spec">11kV / 33kV GRID</span>
+            </div>
+            <div class="svc-hero__cta">
+              <a href="#calc-tool" class="btn btn--solid">Size Furnace MVA <span class="ar">↓</span></a>
+              <a href="tel:+923144641288" class="tlink">Call 0314 4641288 <span class="ar">→</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALCULATOR HUB SWITCHER -->
+  <div class="sheet">
+    <div class="calc-hub-nav">
+      <a href="transformer-kva-calculator.html">⚡ Transformer kVA</a>
+      <a href="solar-roi-calculator-pakistan.html">☀️ Industrial Solar ROI</a>
+      <a href="power-factor-calculator-pakistan.html">📉 Power Factor (PFI)</a>
+      <a href="induction-furnace-transformer-calculator.html" class="active">🧲 Induction Furnace MVA</a>
+      <a href="calculators.html">← All Tools Hub</a>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE TOOL -->
+  <section class="section" id="calc-tool" style="padding-top:0;">
+    <div class="sheet">
+      <div class="calc-box reveal">
+        <div class="calc-inner">
+          <!-- Inputs -->
+          <div>
+            <div class="calc-input-group">
+              <label class="calc-label">Crucible Melting Capacity (Metric Tons)</label>
+              <select id="furnaceTonsInput" class="calc-input">
+                <option value="0.5">0.5 Ton Crucible (Small Foundry)</option>
+                <option value="1">1.0 Ton Crucible</option>
+                <option value="2" selected>2.0 Ton Crucible (Standard Re-Rolling)</option>
+                <option value="3">3.0 Ton Crucible</option>
+                <option value="5">5.0 Ton Crucible (Medium Steel Plant)</option>
+                <option value="10">10.0 Ton Crucible (Heavy Steel Complex)</option>
+                <option value="15">15.0 Ton Crucible</option>
+              </select>
+            </div>
+
+            <div class="calc-input-group">
+              <label class="calc-label">Melting Scrap Material Type</label>
+              <select id="furnaceMetalType" class="calc-input">
+                <option value="steel" selected>Mild Steel / Structural Scrap (~550 kWh/Ton)</option>
+                <option value="iron">Cast Iron / Pig Iron (~500 kWh/Ton)</option>
+                <option value="copper">Copper / Brass Alloy (~350 kWh/Ton)</option>
+                <option value="aluminum">Aluminum Scrap (~600 kWh/Ton)</option>
+              </select>
+            </div>
+
+            <div class="calc-input-group">
+              <label class="calc-label">Desired Heat Melting Cycle Time</label>
+              <select id="furnaceCycleTime" class="calc-input">
+                <option value="45">45 Minutes (High-Speed Rapid Melting)</option>
+                <option value="60" selected>60 Minutes (Standard 1-Hour Heat)</option>
+                <option value="75">75 Minutes (Economic Melting)</option>
+                <option value="90">90 Minutes (Standard Foundry)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Output Card -->
+          <div class="calc-results-card">
+            <div>
+              <div class="calc-res-item">
+                <span class="calc-res-lbl">Recommended Furnace Transformer Rating</span>
+                <div class="calc-res-val" id="furTxRating">1.6 MVA Heavy Duty OFWF</div>
+                <small style="font-size:12px;color:var(--ink-3);">Reinforced Mechanical Core Clamping</small>
+              </div>
+              <div class="calc-res-item">
+                <span class="calc-res-lbl">Required Active Furnace Power</span>
+                <div class="calc-res-val highlight-ink" id="furKwPower">1,100 kW</div>
+              </div>
+              <div class="calc-res-item">
+                <span class="calc-res-lbl">Recommended Harmonic K-Factor Rating</span>
+                <div class="calc-res-val highlight-ink" id="furKFactor">K-13 (Standard Induction)</div>
+              </div>
+              <div class="calc-res-item">
+                <span class="calc-res-lbl">Cooling System Recommendation</span>
+                <div class="calc-res-val highlight-ink" id="furCooling">ONAF (Forced Air Fans)</div>
+              </div>
+              <div class="calc-res-item">
+                <span class="calc-res-lbl">Grid Interconnection Level</span>
+                <div class="calc-res-val highlight-ink" id="furVoltage" style="font-size:16px;">11 kV Direct Feed</div>
+              </div>
+            </div>
+            <a href="#contact" id="furBtnQuote" class="btn btn--solid calc-quote-btn" style="margin-top:20px;text-align:center;">Request Furnace Transformer Quote <span class="ar">→</span></a>
+          </div>
+        </div>
+
+        <div class="calc-desc-box">
+          <b>🧲 Induction Melting Electrical &amp; Thermal Engineering:</b>
+          <div class="calc-formula-pill">Formula: Active kW = (Tons × kWh/Ton) / (Hours) · MVA = (kW / 0.90) × 1.15</div>
+          <p style="margin:4px 0 0;">Furnace transformers experience severe electro-dynamic shock loads during charge drop-ins and high-frequency harmonic distortion. TransfoLine manufactures heavy-duty furnace transformers with electrostatic Faraday shields, K-13 / K-20 harmonic mitigation, and Oil Forced Water Forced (OFWF) heat exchangers for steel melting mills across Badami Bagh, Daroghawala, Sundar, Hattar, and SITE Karachi.</p>
+        </div>
+      </div>
+
+      <!-- FURNACE TONNAGE POWER MATRIX -->
+      <div class="reveal" style="margin:40px 0;">
+        <h3 class="h3" style="font-size:22px;margin-bottom:12px;">Steel Induction Furnace Sizing Matrix (1-Hour Heat Cycle)</h3>
+        <table class="tech-matrix-table">
+          <thead>
+            <tr>
+              <th>Crucible Capacity</th>
+              <th>Active Power (kW)</th>
+              <th>Recommended Transformer MVA</th>
+              <th>Harmonic K-Factor</th>
+              <th>Cooling Configuration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><b>0.5 Ton Foundry</b></td><td>275 kW</td><td>400 kVA - 500 kVA</td><td>K-13</td><td>ONAN Oil Natural</td></tr>
+            <tr><td><b>1.0 Ton Crucible</b></td><td>550 kW</td><td>750 kVA - 1.0 MVA</td><td>K-13</td><td>ONAF Forced Air</td></tr>
+            <tr><td><b>2.0 Ton Standard</b></td><td>1,100 kW</td><td>1.6 MVA - 2.0 MVA</td><td>K-13</td><td>OFWF Water Exchanger</td></tr>
+            <tr><td><b>3.0 Ton Re-Rolling</b></td><td>1,650 kW</td><td>2.5 MVA</td><td>K-13 / K-20</td><td>OFWF Water Exchanger</td></tr>
+            <tr><td><b>5.0 Ton Steel Mill</b></td><td>2,750 kW</td><td>3.5 MVA - 4.0 MVA</td><td>K-20</td><td>OFWF Dual Secondary</td></tr>
+            <tr><td><b>10.0 Ton Complex</b></td><td>5,500 kW</td><td>7.5 MVA - 8.0 MVA</td><td>K-20</td><td>OFWF 33kV Direct</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE FORM SECTION -->
+  <section class="section" id="contact" style="background:var(--paper-2);border-top:1px solid var(--line-2);">
+    <div class="sheet section__pad">
+      <div class="shead reveal">
+        <span class="shead__ix">02</span>
+        <div class="shead__t">
+          <span class="lab"><span class="dot" aria-hidden="true"></span>&nbsp;&nbsp;STEEL SECTOR ENGINEERING CONSULTATION</span>
+          <h2 class="h2">Get a heavy furnace transformer quotation in 2 hours.</h2>
+        </div>
+      </div>
+      <div class="c-grid reveal">
+        <div class="c-info">
+          <p class="lede" style="margin-top:0;">Our specialized heavy power division engineers custom OFWF furnace transformers with copper foil windings, reinforced mechanical bracing, and imported core steel for extreme duty cycles.</p>
+          <div class="c-reg">
+            <a href="tel:+923144641288"><span class="k">Phone</span><span class="v">0314 4641288</span></a>
+            <a href="mailto:info@transfoline.com.pk"><span class="k">Email</span><span class="v">info@transfoline.com.pk</span></a>
+            <a href="https://maps.google.com/?q=Raiwind+Road+Lahore" target="_blank" rel="noopener"><span class="k">Address</span><span class="v">Raiwind Road, Lahore</span></a>
+          </div>
+        </div>
+        <form class="form" id="quoteForm" action="https://formspree.io/f/xnjyqoek" method="POST" novalidate>
+          <div class="form__inner">
+            <h3>Request Furnace Transformer Quote</h3>
+            <p class="sub">Reply within 2 hours</p>
+            <div class="two">
+              <div class="field"><label>Name <span class="req">*</span></label><input type="text" name="name" autocomplete="name" required><div class="msg">Please enter your name.</div></div>
+              <div class="field"><label>Steel Mill / Company Name</label><input type="text" name="company" autocomplete="organization"></div>
+            </div>
+            <div class="two">
+              <div class="field"><label>Phone <span class="req">*</span></label><input type="tel" name="phone" inputmode="tel" placeholder="03XX XXXXXXX" required><div class="msg">Enter an 11-digit phone number.</div></div>
+              <div class="field"><label>City / Steel Hub</label><input type="text" name="city" placeholder="e.g. Lahore, Karachi, Hattar, Gujranwala"></div>
+            </div>
+            <div class="field"><label>Required Equipment <span class="req">*</span></label>
+              <select name="service" required>
+                <option value="Steel Furnace Transformer OFWF" selected>Heavy Steel Furnace Transformer (OFWF / K-Factor)</option>
+                <option value="Furnace Transformer Repair">Furnace Transformer Emergency Repair &amp; Rewind</option>
+                <option value="11kV Substation EPC">11kV / 33kV Dedicated Substation EPC</option>
+                <option value="Harmonic PFI Panel">Harmonic Detuned PFI Capacitor Bank</option>
+              </select><div class="msg">Please choose a service.</div>
+            </div>
+            <div class="field"><label>Furnace Capacity &amp; Specs</label><textarea name="details" placeholder="Crucible tonnage, melting time, primary voltage (11kV/33kV), timeline..."></textarea></div>
+            <button type="submit" class="btn btn--solid">Send Furnace Request <span class="ar">→</span></button>
+          </div>
+          <div class="form__ok">
+            <div class="mk">✓ Request received</div>
+            <h3>Thank you.</h3>
+            <p>Our heavy power engineering division will review your furnace parameters and contact you within two hours.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="sheet">
+    <!-- FOOTER TOP: BRAND, DIRECT CONTACT & SOCIALS -->
+    <div class="footer__top">
+      <div class="footer__brand-box">
+        <a href="index.html#top" class="brand"><img src="images/transfoline-logo.webp" alt="TransfoLine" class="brand__logo1"></a>
+        <p>TransfoLine (Private) Limited — Pakistan's premier turnkey industrial solar EPC contractor, high-voltage substation manufacturer, and certified testing specialist since 2008.</p>
+      </div>
+      <div class="footer__top-contact">
+        <div class="footer__direct-links">
+          <a href="tel:+923144641288" class="footer__c-item"><span class="sq"></span> 0314 4641288</a>
+          <a href="mailto:info@transfoline.com.pk" class="footer__c-item"><span class="sq"></span> info@transfoline.com.pk</a>
+          <span class="footer__c-item"><span class="sq"></span> Raiwind Road, Lahore</span>
+        </div>
+        <div class="footer__socials">
+          <a href="https://pk.linkedin.com/company/transfoline" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45c-.88 0-1.6.72-1.6 1.6 0 .89.72 1.6 1.6 1.6.89 0 1.61-.71 1.61-1.6 0-.88-.72-1.6-1.61-1.6Z"/></svg> LinkedIn</a>
+          <a href="https://www.facebook.com/p/Transfo-Line-100089514231981/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z"/></svg> Facebook</a>
+          <span class="stat-tag is-ok">24/7 Support</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN 4 EQUAL-HEIGHT COLUMNS -->
+    <div class="footer__grid">
+      <!-- COLUMN 1: TRANSFORMERS -->
+      <div class="footer__col">
+        <h4>Transformers</h4>
+        <div class="footer__links">
+          <a href="new-used-transformers.html">New &amp; Certified-Used</a>
+          <a href="solar-inverter-transformers-epc.html">Solar Step-Up Transformers</a>
+          <a href="steel-furnace-transformers.html">Steel Furnace Transformers (OFWF)</a>
+          <a href="dry-type-cast-resin-transformers.html">Cast Resin Dry-Type</a>
+          <a href="high-voltage-power-transformers.html">High-Voltage Power (MVA)</a>
+          <a href="spare-parts.html">Spare Parts &amp; Supplies</a>
+        </div>
+      </div>
+
+      <!-- COLUMN 2: ENGINEERING & EPC -->
+      <div class="footer__col">
+        <h4>Engineering &amp; EPC</h4>
+        <div class="footer__links">
+          <a href="turnkey-substation-epc.html">Turnkey Substation EPC</a>
+          <a href="transformer-repair.html">Repair &amp; Rewinding</a>
+          <a href="oil-dehydration.html">Oil Dehydration &amp; BDV</a>
+          <a href="preventive-maintenance-amc.html">Maintenance &amp; AMC</a>
+          <a href="ht-lt-panel-installation.html">HT / LT Panel Installation</a>
+          <a href="town-electrification.html">Town Electrification</a>
+          <a href="testing-commissioning.html">Testing &amp; Commissioning</a>
+        </div>
+      </div>
+
+      <!-- COLUMN 3: SOLAR & RENEWABLE -->
+      <div class="footer__col">
+        <h4>Solar &amp; Renewable</h4>
+        <div class="footer__links">
+          <a href="solar-energy-solutions.html">Commercial &amp; Industrial Solar</a>
+          <a href="solar-panels-inverters-cables.html">Panels, Inverters &amp; Cables</a>
+          <a href="100kw-solar-system-price-pakistan.html">100 kW Commercial System</a>
+          <a href="500kw-industrial-solar-system.html">500 kW Industrial Substation</a>
+          <a href="1mw-solar-power-plant-pakistan.html">1 MW to 5 MW Solar Plants</a>
+          <a href="ev-charging-solutions-pakistan.html">Commercial EV Fast Charging</a>
+          <a href="calculators.html" style="color:var(--accent-ink);font-weight:600;">Engineering Calculators Hub <span class="ar">→</span></a>
+        </div>
+      </div>
+
+      <!-- COLUMN 4: KNOWLEDGE & HUBS -->
+      <div class="footer__col">
+        <h4>Knowledge &amp; Cities</h4>
+        <div class="footer__links">
+          <a href="blog.html" style="color:var(--accent-ink);font-weight:600;">Blog &amp; Knowledge Hub <span class="ar">→</span></a>
+          <a href="transformer-services-lahore.html">Lahore (Head Office)</a>
+          <a href="transformer-services-karachi.html">Karachi Coastal Division</a>
+          <a href="transformer-services-islamabad.html">Islamabad Capital Hub</a>
+          <a href="transformer-services-rawalpindi.html">Rawalpindi Industrial</a>
+          <a href="transformer-services-faisalabad.html">Faisalabad Textile Hub</a>
+          <a href="transformer-services-multan.html">Multan &amp; South Punjab</a>
+          <a href="transformer-services-gilgit.html">Gilgit &amp; Northern Areas</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER BASE -->
+    <div class="footer__base">
+      <span>© 2026 TRANSFO LINE (PRIVATE) LIMITED</span>
+      <span>D-U-N-S® Registered: <a href="https://www.dnb.com/business-directory/company-profiles.transfo_line_(private)_limited.6e4d401fc4a6bd30db45ae2a751837d4.html" target="_blank" rel="noopener" class="footer__credit">75-794-4658</a></span>
+      <span>Designed &amp; Developed by <a href="https://webcraftio.com" target="_blank" rel="noopener" class="footer__credit">WebCraftio</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="bottom-call-bar">
+  <a href="tel:+923144641288" class="bottom-call-btn" aria-label="Call TransfoLine 0314 4641288">
+    <span class="bottom-call-btn__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z" fill="currentColor"/></svg></span>
+    <span class="bottom-call-btn__text"><span class="bottom-call-btn__tag"><span class="bottom-call-btn__dot"></span> Call Us 24/7</span><span class="bottom-call-btn__number">0314 4641288</span></span>
+    <span class="bottom-call-btn__action">Call Now <span class="bottom-call-btn__arr">→</span></span>
+  </a>
+</div>
+<div class="float-btns">
+  <a href="tel:+923144641288" class="call-float" aria-label="Call TransfoLine"><svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z" fill="currentColor"/></svg></a>
+  <a href="https://wa.me/923144641288" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" fill="none"><path d="M16.004 2.667A13.28 13.28 0 0 0 2.73 15.942a13.2 13.2 0 0 0 1.79 6.628L2.667 29.333l6.96-1.825A13.28 13.28 0 0 0 16.004 29.3 13.32 13.32 0 1 0 16.004 2.667Zm0 24.32a11 11 0 0 1-5.61-1.535l-.402-.24-4.17 1.094 1.113-4.07-.262-.418a10.96 10.96 0 0 1-1.684-5.876A11.02 11.02 0 1 1 16.004 26.987Zm6.044-8.244c-.332-.166-1.963-.968-2.267-1.08-.305-.11-.526-.166-.748.167s-.858 1.08-1.052 1.3c-.194.222-.387.25-.72.084a9.1 9.1 0 0 1-2.675-1.65 10 10 0 0 1-1.85-2.303c-.194-.333-.02-.513.146-.678.149-.15.332-.388.498-.582.166-.194.222-.333.332-.555.111-.222.056-.416-.028-.582s-.748-1.803-1.025-2.47c-.27-.648-.544-.56-.748-.57l-.637-.012a1.22 1.22 0 0 0-.886.416c-.305.333-1.163 1.136-1.163 2.77s1.19 3.213 1.357 3.435c.166.222 2.342 3.575 5.675 5.014.793.342 1.412.547 1.894.7.796.253 1.52.217 2.093.131.639-.095 1.963-.803 2.24-1.578.277-.775.277-1.44.194-1.578-.083-.139-.305-.222-.637-.389Z" fill="currentColor"/></svg></a>
+</div>
+<script src="app.js"></script>
+<script src="calculators.js"></script>
+<script src="tracking.js"></script>
+
+</body>
+</html>

@@ -212,83 +212,110 @@
       <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
-  <div class="nav__mobile" id="mobileMenu">
-    <a href="../index.html">Home</a>
-    <a href="../index.html#why">Why Us</a>
-    <a href="../calculators.html">🧮 Calculators</a>
-    <div class="nav__mobile-dropdown">
-      <button class="nav__mobile-trigger" id="mobileServicesBtn" aria-expanded="false">
-        <span>Services</span>
-        <span class="nav__mobile-arrow">▾</span>
+    <div class="nav__mobile" id="mobileMenu">
+    <!-- Top Quick Links -->
+    <div class="nav__mobile-quick">
+      <a href="../index.html" class="nav__mobile-item">Home</a>
+      <a href="../index.html#why" class="nav__mobile-item">Why Us</a>
+      <a href="../calculators.html" class="nav__mobile-item nav__mobile-item--featured">
+        <span>⚡ Engineering Calculators</span>
+        <span class="nav__mobile-pill">Interactive</span>
+      </a>
+      <a href="../blog.html" class="nav__mobile-item">📰 Blog &amp; Knowledge Hub</a>
+    </div>
+
+    <!-- 4-Pillar Services Accordion Group -->
+    <div class="nav__mobile-section-title">Services &amp; Equipment</div>
+
+    <!-- 1. Transformers Pillar -->
+    <div class="nav__mob-accordion">
+      <button class="nav__mob-acc-trigger" aria-expanded="false">
+        <span class="nav__mob-acc-title">
+          <span class="nav__mob-acc-icon">⚡</span>
+          <span>Transformers</span>
+        </span>
+        <span class="nav__mob-acc-badge">6 Products <span class="nav__mob-arrow">▾</span></span>
       </button>
-                              <div class="nav__mobile-sub" id="mobileServicesMenu">
-        <div class="nav__mobile-sub-group">
-          <div class="nav__mobile-sub-row">
-            <a href="../solar-energy-solutions.html" class="nav__mobile-sub-link">☀️ Solar &amp; Renewable EPC</a>
-            <button class="nav__mobile-nested-toggle" id="mobileSolarBtn" aria-label="Toggle Solar Submenu" aria-expanded="false">▾</button>
-          </div>
-          <div class="nav__mobile-nested" id="mobileSolarMenu">
-            <a href="../solar-energy-solutions.html">Commercial &amp; Industrial Solar EPC</a>
-            <a href="../solar-panels-inverters-cables.html">Solar Hardware (Panels, Inverters, Cables)</a>
-            <a href="../100kw-solar-system-price-pakistan.html">100 kW Commercial Solar System</a>
-            <a href="../500kw-industrial-solar-system.html">500 kW Industrial Solar Substation</a>
-            <a href="../1mw-solar-power-plant-pakistan.html">1 MW to 5 MW Solar Power Plants</a>
-            <a href="../solar-inverter-transformers-epc.html">Solar Inverter Step-Up Transformers</a>
-            <a href="../ev-charging-solutions-pakistan.html">Commercial EV Fast-Charging Stations</a>
-          </div>
-        </div>
-        <div class="nav__mobile-sub-group">
-          <div class="nav__mobile-sub-row">
-            <a href="../new-used-transformers.html" class="nav__mobile-sub-link">Industrial Transformers</a>
-            <button class="nav__mobile-nested-toggle" id="mobileTransformersBtn" aria-label="Toggle Transformers Submenu" aria-expanded="false">▾</button>
-          </div>
-          <div class="nav__mobile-nested" id="mobileTransformersMenu">
-            <a href="../solar-inverter-transformers-epc.html">Solar Inverter Transformers (Step-Up)</a>
-            <a href="../steel-furnace-transformers.html">Steel Furnace Transformers (OFWF)</a>
-            <a href="../dry-type-cast-resin-transformers.html">Cast Resin Dry-Type (Fire-Safe)</a>
-            <a href="../high-voltage-power-transformers.html">High-Voltage Power (1MVA–40MVA)</a>
-            <a href="../new-used-transformers.html">Distribution (New &amp; Certified-Used)</a>
-          </div>
-        </div>
-        <a href="../turnkey-substation-epc.html">Turnkey Substation EPC</a>
-        <a href="../transformer-repair.html">Transformer Repair &amp; Rewinding</a>
-        <a href="../oil-dehydration.html">Oil Dehydration &amp; Filtration</a>
-        <a href="../preventive-maintenance-amc.html">Maintenance &amp; AMC Contracts</a>
-        <a href="../town-electrification.html">Town Electrification</a>
-        <div class="nav__mobile-sub-group">
-          <div class="nav__mobile-sub-row">
-            <a href="../testing-commissioning.html" class="nav__mobile-sub-link">Testing &amp; Commissioning</a>
-            <button class="nav__mobile-nested-toggle" id="mobileTestingBtn" aria-label="Toggle Testing Services Submenu" aria-expanded="false">▾</button>
-          </div>
-          <div class="nav__mobile-nested" id="mobileTestingMenu">
-            <a href="../insulation-resistance-testing.html">Insulation Resistance Testing</a>
-            <a href="../transformer-testing.html">Transformer Diagnostic Testing</a>
-            <a href="../high-voltage-testing.html">High Voltage (Hipot) Testing</a>
-            <a href="../protection-relay-testing.html">Protection Relay Testing</a>
-            <a href="../thermal-imaging.html">Thermal Imaging Inspection</a>
-            <a href="../circuit-breaker-testing.html">Circuit Breaker Testing</a>
-            <a href="../generator-testing.html">Generator &amp; Load Bank Testing</a>
-            <a href="../power-quality-analysis.html">Power Quality Analysis</a>
-            <a href="../earth-ground-testing.html">Earth Ground Testing</a>
-            <a href="../underground-cable-testing.html">Underground Cable Testing</a>
-            <a href="../motor-load-testing.html">Motor &amp; Load Testing</a>
-            <a href="../control-system-testing.html">Control System Testing</a>
-            <a href="../pre-commissioning-checks.html">Pre-Commissioning Checks</a>
-            <a href="../electrical-commissioning.html">Electrical Commissioning</a>
-            <a href="../continuity-testing.html">Continuity Testing</a>
-          </div>
-        </div>
-        <a href="../ht-lt-panel-installation.html">HT / LT Panel Installation</a>
-        <a href="../spare-parts.html">Spare Parts &amp; Supplies</a>
+      <div class="nav__mob-acc-panel">
+        <a href="../new-used-transformers.html">New &amp; Certified-Used Transformers</a>
+        <a href="../solar-inverter-transformers-epc.html">Solar Inverter Step-Up Transformers</a>
+        <a href="../steel-furnace-transformers.html">Steel Furnace Transformers (OFWF)</a>
+        <a href="../dry-type-cast-resin-transformers.html">Cast Resin Dry-Type Transformers</a>
+        <a href="../high-voltage-power-transformers.html">High-Voltage Power Transformers (MVA)</a>
+        <a href="../spare-parts.html">Transformer Spare Parts &amp; Supplies</a>
       </div>
     </div>
-    <a href="../index.html#process">Process</a>
-    <a href="../index.html#faq">FAQ</a>
-    <a href="../contact-us.html">Contact</a>
-    <a href="../contact-us.html" class="btn btn--solid">Get Wholesale Quote</a>
-    <a href="tel:+923144641288" class="nav__mobile-call"><span class="nav__mobile-call-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z" fill="currentColor"/></svg></span>Call Us: 0314 4641288</a>
-  </div>
-</header>
+
+    <!-- 2. Engineering & Substation EPC Pillar -->
+    <div class="nav__mob-accordion">
+      <button class="nav__mob-acc-trigger" aria-expanded="false">
+        <span class="nav__mob-acc-title">
+          <span class="nav__mob-acc-icon">🛠️</span>
+          <span>Engineering Services</span>
+        </span>
+        <span class="nav__mob-acc-badge">6 Services <span class="nav__mob-arrow">▾</span></span>
+      </button>
+      <div class="nav__mob-acc-panel">
+        <a href="../turnkey-substation-epc.html">Turnkey Substation EPC (11kV/132kV)</a>
+        <a href="../transformer-repair.html">Transformer Repair &amp; Rewinding</a>
+        <a href="../oil-dehydration.html">Oil Dehydration &amp; BDV Filtration</a>
+        <a href="../preventive-maintenance-amc.html">Maintenance &amp; AMC Contracts</a>
+        <a href="../ht-lt-panel-installation.html">HT / LT Panel Installation</a>
+        <a href="../town-electrification.html">Town Electrification</a>
+      </div>
+    </div>
+
+    <!-- 3. Solar & Renewable Power Pillar -->
+    <div class="nav__mob-accordion">
+      <button class="nav__mob-acc-trigger" aria-expanded="false">
+        <span class="nav__mob-acc-title">
+          <span class="nav__mob-acc-icon">☀️</span>
+          <span>Solar &amp; Renewable</span>
+        </span>
+        <span class="nav__mob-acc-badge">6 Solutions <span class="nav__mob-arrow">▾</span></span>
+      </button>
+      <div class="nav__mob-acc-panel">
+        <a href="../solar-energy-solutions.html">Commercial &amp; Industrial Solar EPC</a>
+        <a href="../solar-panels-inverters-cables.html">Solar Hardware (Panels, Inverters, Cables)</a>
+        <a href="../100kw-solar-system-price-pakistan.html">100 kW Commercial Solar System</a>
+        <a href="../500kw-industrial-solar-system.html">500 kW Industrial Solar Substation</a>
+        <a href="../1mw-solar-power-plant-pakistan.html">1 MW to 5 MW Solar Power Plants</a>
+        <a href="../ev-charging-solutions-pakistan.html">Commercial EV Fast-Charging Stations</a>
+      </div>
+    </div>
+
+    <!-- 4. Testing & Diagnostics Pillar -->
+    <div class="nav__mob-accordion">
+      <button class="nav__mob-acc-trigger" aria-expanded="false">
+        <span class="nav__mob-acc-title">
+          <span class="nav__mob-acc-icon">🔬</span>
+          <span>Testing &amp; Diagnostics</span>
+        </span>
+        <span class="nav__mob-acc-badge">6 Tests <span class="nav__mob-arrow">▾</span></span>
+      </button>
+      <div class="nav__mob-acc-panel">
+        <a href="../insulation-resistance-testing.html">Insulation Resistance Testing (Megger)</a>
+        <a href="../transformer-testing.html">Transformer Diagnostic Testing (DGA)</a>
+        <a href="../high-voltage-testing.html">High Voltage (Hipot) Testing</a>
+        <a href="../protection-relay-testing.html">Protection Relay Testing</a>
+        <a href="../thermal-imaging.html">Thermal Imaging Inspection (FLIR)</a>
+        <a href="../circuit-breaker-testing.html">Circuit Breaker Testing</a>
+      </div>
+    </div>
+
+    <!-- Bottom Links -->
+    <div class="nav__mobile-quick" style="margin-top:6px;">
+      <a href="../index.html#process" class="nav__mobile-item">Procedure &amp; Timeline</a>
+      <a href="../index.html#faq" class="nav__mobile-item">FAQ</a>
+      <a href="../contact-us.html" class="nav__mobile-item">Contact &amp; Regional Hubs</a>
+    </div>
+
+    <!-- Direct CTA Buttons -->
+    <div class="nav__mobile-ctas">
+      <a href="../contact-us.html" class="btn btn--solid" style="width:100%;justify-content:center;">Get Wholesale Quote <span class="ar">→</span></a>
+      <a href="tel:+923144641288" class="nav__mobile-call"><span class="nav__mobile-call-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z" fill="currentColor"/></svg></span>Call Us: 0314 4641288</a>
+    </div>
+  </div></header>
 
 <main>
 

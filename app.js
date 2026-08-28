@@ -18,48 +18,36 @@
     });
   }
 
-  /* ---- 2. Mobile Menu Accordions (Event Delegation) ---- */
+  /* ---- 2. Modern Mobile Accordion Controller ---- */
   if (mobileMenu) {
     mobileMenu.addEventListener('click', function (e) {
-      // 1. Services Main Trigger
-      var servicesBtn = e.target.closest('#mobileServicesBtn, .nav__mobile-trigger');
-      if (servicesBtn) {
+      // 1. Accordion Trigger Tapped
+      var accTrigger = e.target.closest('.nav__mob-acc-trigger');
+      if (accTrigger) {
         e.preventDefault();
         e.stopPropagation();
-        var servicesMenu = document.getElementById('mobileServicesMenu') || servicesBtn.nextElementSibling;
-        if (servicesMenu) {
-          var isExpanded = servicesMenu.classList.toggle('open');
-          servicesBtn.classList.toggle('open', isExpanded);
-          servicesBtn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+        var parentAcc = accTrigger.closest('.nav__mob-accordion');
+        if (parentAcc) {
+          var isAlreadyOpen = parentAcc.classList.contains('open');
+          
+          // Close other open accordions for crisp single-open UX
+          mobileMenu.querySelectorAll('.nav__mob-accordion.open').forEach(function (acc) {
+            if (acc !== parentAcc) {
+              acc.classList.remove('open');
+              var tr = acc.querySelector('.nav__mob-acc-trigger');
+              if (tr) tr.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          parentAcc.classList.toggle('open', !isAlreadyOpen);
+          accTrigger.setAttribute('aria-expanded', !isAlreadyOpen ? 'true' : 'false');
         }
         return;
       }
 
-      // 2. Nested Subgroup Toggles (Solar, Transformers, Testing)
-      var nestedToggle = e.target.closest('.nav__mobile-nested-toggle');
-      if (nestedToggle) {
-        e.preventDefault();
-        e.stopPropagation();
-        var parentGroup = nestedToggle.closest('.nav__mobile-sub-group');
-        var nestedMenu = parentGroup ? parentGroup.querySelector('.nav__mobile-nested') : null;
-        
-        if (!nestedMenu && nestedToggle.id) {
-          if (nestedToggle.id === 'mobileSolarBtn') nestedMenu = document.getElementById('mobileSolarMenu');
-          if (nestedToggle.id === 'mobileTransformersBtn') nestedMenu = document.getElementById('mobileTransformersMenu');
-          if (nestedToggle.id === 'mobileTestingBtn') nestedMenu = document.getElementById('mobileTestingMenu');
-        }
-
-        if (nestedMenu) {
-          var isNestedOpen = nestedMenu.classList.toggle('open');
-          nestedToggle.classList.toggle('open', isNestedOpen);
-          nestedToggle.setAttribute('aria-expanded', isNestedOpen ? 'true' : 'false');
-        }
-        return;
-      }
-
-      // 3. Normal navigation link clicked -> Close mobile menu
+      // 2. Normal link clicked -> Close mobile menu drawer
       var link = e.target.closest('a');
-      if (link && !link.classList.contains('nav__mobile-trigger') && !link.classList.contains('nav__mobile-nested-toggle')) {
+      if (link && !link.classList.contains('nav__mob-acc-trigger')) {
         nav.classList.remove('open');
         if (burger) burger.setAttribute('aria-expanded', 'false');
         document.body.classList.remove('nav-lock');
@@ -67,7 +55,7 @@
     });
   }
 
-  // Close when clicking outside of nav
+  // Close mobile menu when clicking outside
   document.addEventListener('click', function (e) {
     if (nav && nav.classList.contains('open')) {
       if (!nav.contains(e.target)) {

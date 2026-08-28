@@ -6,84 +6,79 @@
   var nav = document.getElementById('nav');
   var burger = document.getElementById('burger');
   var mobileMenu = document.getElementById('mobileMenu');
-  var mobileServicesBtn = document.getElementById('mobileServicesBtn');
-  var mobileServicesMenu = document.getElementById('mobileServicesMenu');
-  var mobileTransformersBtn = document.getElementById('mobileTransformersBtn');
-  var mobileTransformersMenu = document.getElementById('mobileTransformersMenu');
-  var mobileTestingBtn = document.getElementById('mobileTestingBtn');
-  var mobileTestingMenu = document.getElementById('mobileTestingMenu');
 
   /* ---- 1. Mobile Menu (Hamburger) Toggle ---- */
   if (nav && burger) {
     burger.addEventListener('click', function (e) {
+      e.preventDefault();
       e.stopPropagation();
       var isOpen = nav.classList.toggle('open');
       burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.classList.toggle('nav-lock', isOpen);
     });
   }
 
-  /* ---- 2. Mobile Services Dropdown Accordion ---- */
-  if (mobileServicesBtn && mobileServicesMenu) {
-    function toggleServicesDropdown(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var isOpen = mobileServicesMenu.classList.toggle('open');
-      mobileServicesBtn.classList.toggle('open', isOpen);
-      mobileServicesBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    }
-    mobileServicesBtn.addEventListener('click', toggleServicesDropdown);
-  }
-
-    var mobileSolarBtn = document.getElementById('mobileSolarBtn');
-  var mobileSolarMenu = document.getElementById('mobileSolarMenu');
-  if (mobileSolarBtn && mobileSolarMenu) {
-    function toggleSolarDropdown(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var isOpen = mobileSolarMenu.classList.toggle('open');
-      mobileSolarBtn.classList.toggle('open', isOpen);
-      mobileSolarBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    }
-    mobileSolarBtn.addEventListener('click', toggleSolarDropdown);
-  }
-
-  /* ---- 3. Mobile Nested Transformers Submenu Accordion ---- */
-  if (mobileTransformersBtn && mobileTransformersMenu) {
-    function toggleTransformersDropdown(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var isOpen = mobileTransformersMenu.classList.toggle('open');
-      mobileTransformersBtn.classList.toggle('open', isOpen);
-      mobileTransformersBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    }
-    mobileTransformersBtn.addEventListener('click', toggleTransformersDropdown);
-  }
-
-  /* ---- 4. Mobile Nested Testing Submenu Accordion ---- */
-  if (mobileTestingBtn && mobileTestingMenu) {
-    function toggleTestingDropdown(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var isOpen = mobileTestingMenu.classList.toggle('open');
-      mobileTestingBtn.classList.toggle('open', isOpen);
-      mobileTestingBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    }
-    mobileTestingBtn.addEventListener('click', toggleTestingDropdown);
-  }
-
-  /* ---- 5. Close Mobile Menu on Normal Link Click ---- */
-  if (nav && mobileMenu && burger) {
+  /* ---- 2. Mobile Menu Accordions (Event Delegation) ---- */
+  if (mobileMenu) {
     mobileMenu.addEventListener('click', function (e) {
-      var targetLink = e.target.closest('a');
-      // If it's a real navigation link (not a toggle button or nested trigger)
-      if (targetLink && !targetLink.classList.contains('nav__mobile-trigger') && !targetLink.classList.contains('nav__mobile-nested-toggle')) {
+      // 1. Services Main Trigger
+      var servicesBtn = e.target.closest('#mobileServicesBtn, .nav__mobile-trigger');
+      if (servicesBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        var servicesMenu = document.getElementById('mobileServicesMenu') || servicesBtn.nextElementSibling;
+        if (servicesMenu) {
+          var isExpanded = servicesMenu.classList.toggle('open');
+          servicesBtn.classList.toggle('open', isExpanded);
+          servicesBtn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+        }
+        return;
+      }
+
+      // 2. Nested Subgroup Toggles (Solar, Transformers, Testing)
+      var nestedToggle = e.target.closest('.nav__mobile-nested-toggle');
+      if (nestedToggle) {
+        e.preventDefault();
+        e.stopPropagation();
+        var parentGroup = nestedToggle.closest('.nav__mobile-sub-group');
+        var nestedMenu = parentGroup ? parentGroup.querySelector('.nav__mobile-nested') : null;
+        
+        if (!nestedMenu && nestedToggle.id) {
+          if (nestedToggle.id === 'mobileSolarBtn') nestedMenu = document.getElementById('mobileSolarMenu');
+          if (nestedToggle.id === 'mobileTransformersBtn') nestedMenu = document.getElementById('mobileTransformersMenu');
+          if (nestedToggle.id === 'mobileTestingBtn') nestedMenu = document.getElementById('mobileTestingMenu');
+        }
+
+        if (nestedMenu) {
+          var isNestedOpen = nestedMenu.classList.toggle('open');
+          nestedToggle.classList.toggle('open', isNestedOpen);
+          nestedToggle.setAttribute('aria-expanded', isNestedOpen ? 'true' : 'false');
+        }
+        return;
+      }
+
+      // 3. Normal navigation link clicked -> Close mobile menu
+      var link = e.target.closest('a');
+      if (link && !link.classList.contains('nav__mobile-trigger') && !link.classList.contains('nav__mobile-nested-toggle')) {
         nav.classList.remove('open');
-        burger.setAttribute('aria-expanded', 'false');
+        if (burger) burger.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-lock');
       }
     });
   }
 
-  /* ---- 6. Desktop / Tablet Touch Dropdown Support ---- */
+  // Close when clicking outside of nav
+  document.addEventListener('click', function (e) {
+    if (nav && nav.classList.contains('open')) {
+      if (!nav.contains(e.target)) {
+        nav.classList.remove('open');
+        if (burger) burger.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-lock');
+      }
+    }
+  });
+
+  /* ---- 3. Desktop / Tablet Touch Dropdown Support ---- */
   var desktopDropTriggers = document.querySelectorAll('.nav__drop-trigger');
   desktopDropTriggers.forEach(function (trigger) {
     trigger.addEventListener('click', function (e) {
@@ -109,7 +104,6 @@
     }
   });
 
-  
   // Close desktop active dropdown when clicking any mega-link
   document.querySelectorAll('.nav__drop-menu a').forEach(function(link) {
     link.addEventListener('click', function() {
@@ -119,7 +113,7 @@
     });
   });
 
-  /* ---- 7. FAQ Accordion: Single-Open + Category Filter ---- */
+  /* ---- 4. FAQ Accordion: Single-Open + Category Filter ---- */
   var faqList = document.getElementById('faqList');
   if (faqList) {
     var faqs = Array.prototype.slice.call(faqList.querySelectorAll('.faq'));
@@ -149,7 +143,7 @@
     });
   }
 
-  /* ---- 8. Quote Form Validation + Success State ---- */
+  /* ---- 5. Quote Form Validation + Success State ---- */
   var form = document.getElementById('quoteForm');
   if (form) {
     function setErr(field, on) { if (field) field.classList.toggle('err', on); }
@@ -223,7 +217,7 @@
     });
   }
 
-  /* ---- 9. Scroll Reveal Animations ---- */
+  /* ---- 6. Scroll Reveal Animations ---- */
   var reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {

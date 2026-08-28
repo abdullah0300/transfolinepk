@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GT-MK4LGQ9D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GT-MK4LGQ9D');
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x1wrvodwit");
+</script>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="/images/transfoline_logo-removebg-preview.png">
+<link rel="apple-touch-icon" href="/images/transfoline_logo-removebg-preview.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>DGA Gas Testing & SFRA for Power Transformers | PK</title>
+<meta name="description" content="Predict MVA power transformer failures in Pakistan using Dissolved Gas Analysis (DGA), Duval Triangle, and Sweep Frequency Response Analysis (SFRA).">
+<meta name="keywords" content="power transformer dissolved gas analysis dga test, sweep frequency response analysis sfra power transformer, c&df test of power transformer, duval triangle dga interpretation, omicron transformer testing pakistan">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="TransfoLine Engineering Division">
+<link rel="canonical" href="https://transfoline.com.pk/blog/dissolved-gas-analysis-dga-sfra-power-transformers.html">
+
+<!-- Geo / Language -->
+<meta name="geo.region" content="PK-PB">
+<meta name="geo.placename" content="Lahore">
+<meta name="geo.position" content="31.4504;74.3587">
+<meta name="ICBM" content="31.4504, 74.3587">
+<meta name="language" content="English">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="TransfoLine">
+<meta property="og:title" content="DGA Gas Testing & SFRA for Power Transformers | TransfoLine">
+<meta property="og:description" content="Predict MVA power transformer failures in Pakistan using Dissolved Gas Analysis (DGA), Duval Triangle, and Sweep Frequency Response Analysis (SFRA).">
+<meta property="og:url" content="https://transfoline.com.pk/blog/dissolved-gas-analysis-dga-sfra-power-transformers.html">
+<meta property="og:image" content="https://transfoline.com.pk/images/transformer-dga-testing.jpg">
+<meta property="og:locale" content="en_PK">
+
+<!-- Structured Data: BlogPosting, BreadcrumbList, FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "DGA Gas Testing & SFRA for Power Transformers",
+      "description": "Predict MVA power transformer failures in Pakistan using Dissolved Gas Analysis (DGA), Duval Triangle, and Sweep Frequency Response Analysis (SFRA).",
+      "image": "https://transfoline.com.pk/images/transformer-dga-testing.jpg",
+      "datePublished": "2026-08-25",
+      "dateModified": "2026-08-27",
+      "author": {
+        "@type": "Organization",
+        "name": "TransfoLine Engineering Division",
+        "url": "https://transfoline.com.pk"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "TransfoLine",
+        "url": "https://transfoline.com.pk",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://transfoline.com.pk/images/transfoline-logo.webp"
+        }
+      },
+      "mainEntityOfPage": "https://transfoline.com.pk/blog/dissolved-gas-analysis-dga-sfra-power-transformers.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://transfoline.com.pk/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://transfoline.com.pk/blog.html"},
+        {"@type": "ListItem", "position": 3, "name": "DGA Gas Testing & SFRA for Power Transformers"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the most critical fault gas in transformer oil DGA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Acetylene (C2H2) is the most critical gas; any concentration above 2 to 5 ppm proves active, high-energy electrical arcing inside the transformer tank."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does SFRA detect mechanical winding damage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SFRA injects high-frequency sweeps (20Hz–2MHz) to map the winding's electrical transfer function; shifts in resonant peak frequencies prove physical coil displacement or core deformation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should DGA testing be conducted in industrial facilities?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For critical industrial transformers, DGA should be conducted every 6 months, or immediately following an upstream short-circuit fault trip."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is an acceptable Tan Delta value for a power transformer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For new oil-immersed power transformers at 20°C, Tan Delta should be &le; 0.5%; values exceeding 1.0% indicate moisture contamination or aging."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can TransfoLine perform DGA testing without taking the transformer off-line?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, oil sampling for DGA is performed safely via hermetic syringes while the transformer is energized and delivering full load current."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="sheet nav__in">
+    <a href="../index.html" class="brand" aria-label="TransfoLine home">
+      <img src="../images/transfoline-logo.webp" alt="TransfoLine" class="brand__logo">
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#why">Why Us</a>
+      <div class="nav__dropdown">
+        <a href="../index.html#services" class="nav__drop-trigger">Services <span class="nav__arrow">▾</span></a>
+                                                                                <div class="nav__drop-menu mega-menu">
+          <!-- COLUMN 1: TRANSFORMERS -->
+          <div class="mega-col">
+            <div class="mega-col__title">Transformers</div>
+            <div class="mega-col__list">
+              <a href="../new-used-transformers.html" class="mega-link">New &amp; Certified-Used Transformers</a>
+              <a href="../solar-inverter-transformers-epc.html" class="mega-link">Solar Inverter Step-Up Transformers</a>
+              <a href="../steel-furnace-transformers.html" class="mega-link">Steel Furnace Transformers (OFWF)</a>
+              <a href="../dry-type-cast-resin-transformers.html" class="mega-link">Cast Resin Dry-Type Transformers</a>
+              <a href="../high-voltage-power-transformers.html" class="mega-link">High-Voltage Power Transformers (MVA)</a>
+              <a href="../spare-parts.html" class="mega-link">Transformer Spare Parts &amp; Supplies</a>
+            </div>
+          </div>
+
+          <!-- COLUMN 2: ENGINEERING SERVICES (BEFORE SOLAR) -->
+          <div class="mega-col">
+            <div class="mega-col__title">Engineering Services</div>
+            <div class="mega-col__list">
+              <a href="../turnkey-substation-epc.html" class="mega-link">Turnkey Substation EPC (11kV/132kV)</a>
+              <a href="../transformer-repair.html" class="mega-link">Transformer Repair &amp; Rewinding</a>
+              <a href="../oil-dehydration.html" class="mega-link">Oil Dehydration &amp; BDV Filtration</a>
+              <a href="../preventive-maintenance-amc.html" class="mega-link">Maintenance &amp; AMC Contracts</a>
+              <a href="../ht-lt-panel-installation.html" class="mega-link">HT / LT Panel Installation</a>
+              <a href="../town-electrification.html" class="mega-link">Town Electrification</a>
+            </div>
+          </div>
+
+          <!-- COLUMN 3: SOLAR & RENEWABLE -->
+          <div class="mega-col">
+            <div class="mega-col__title">Solar &amp; Renewable</div>
+            <div class="mega-col__list">
+              <a href="../solar-energy-solutions.html" class="mega-link">Commercial &amp; Industrial Solar EPC</a>
+              <a href="../solar-panels-inverters-cables.html" class="mega-link">Solar Panels, Inverters &amp; Cables</a>
+              <a href="../100kw-solar-system-price-pakistan.html" class="mega-link">100 kW Commercial System</a>
+              <a href="../500kw-industrial-solar-system.html" class="mega-link">500 kW Industrial Substation</a>
+              <a href="../1mw-solar-power-plant-pakistan.html" class="mega-link">1 MW to 5 MW Solar Power Plants</a>
+              <a href="../ev-charging-solutions-pakistan.html" class="mega-link">Commercial EV Fast Charging</a>
+            </div>
+          </div>
+
+          <!-- COLUMN 4: TESTING & DIAGNOSTICS -->
+          <div class="mega-col">
+            <div class="mega-col__title">Testing &amp; Diagnostics</div>
+            <div class="mega-col__list">
+              <a href="../insulation-resistance-testing.html" class="mega-link">Insulation Resistance Testing (Megger)</a>
+              <a href="../transformer-testing.html" class="mega-link">Transformer Diagnostic Testing (DGA)</a>
+              <a href="../high-voltage-testing.html" class="mega-link">High Voltage (Hipot) Testing</a>
+              <a href="../protection-relay-testing.html" class="mega-link">Protection Relay Testing</a>
+              <a href="../thermal-imaging.html" class="mega-link">Thermal Imaging Inspection (FLIR)</a>
+              <a href="../circuit-breaker-testing.html" class="mega-link">Circuit Breaker Testing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="../calculators.html">Calculators</a>
+      <a href="../index.html#process">Process</a>
+      <a href="../index.html#faq">FAQ</a>
+      <a href="../contact-us.html">Contact</a>
+    </nav>
+    <div class="nav__right">
+      <a href="tel:+923144641288" class="nav__tel"><span class="sq" aria-hidden="true"></span>0314 4641288</a>
+      <a href="../contact-us.html" class="btn btn--solid btn--sm">Get Quote</a>
+      <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#why">Why Us</a>
+    <a href="../calculators.html">🧮 Calculators</a>
+    <div class="nav__mobile-dropdown">
+      <button class="nav__mobile-trigger" id="mobileServicesBtn" aria-expanded="false">
+        <span>Services</span>
+        <span class="nav__mobile-arrow">▾</span>
+      </button>
+                              <div class="nav__mobile-sub" id="mobileServicesMenu">
+        <div class="nav__mobile-sub-group">
+          <div class="nav__mobile-sub-row">
+            <a href="../solar-energy-solutions.html" class="nav__mobile-sub-link">☀️ Solar &amp; Renewable EPC</a>
+            <button class="nav__mobile-nested-toggle" id="mobileSolarBtn" aria-label="Toggle Solar Submenu" aria-expanded="false">▾</button>
+          </div>
+          <div class="nav__mobile-nested" id="mobileSolarMenu">
+            <a href="../solar-energy-solutions.html">Commercial &amp; Industrial Solar EPC</a>
+            <a href="../solar-panels-inverters-cables.html">Solar Hardware (Panels, Inverters, Cables)</a>
+            <a href="../100kw-solar-system-price-pakistan.html">100 kW Commercial Solar System</a>
+            <a href="../500kw-industrial-solar-system.html">500 kW Industrial Solar Substation</a>
+            <a href="../1mw-solar-power-plant-pakistan.html">1 MW to 5 MW Solar Power Plants</a>
+            <a href="../solar-inverter-transformers-epc.html">Solar Inverter Step-Up Transformers</a>
+            <a href="../ev-charging-solutions-pakistan.html">Commercial EV Fast-Charging Stations</a>
+          </div>
+        </div>
+        <div class="nav__mobile-sub-group">
+          <div class="nav__mobile-sub-row">
+            <a href="../new-used-transformers.html" class="nav__mobile-sub-link">Industrial Transformers</a>
+            <button class="nav__mobile-nested-toggle" id="mobileTransformersBtn" aria-label="Toggle Transformers Submenu" aria-expanded="false">▾</button>
+          </div>
+          <div class="nav__mobile-nested" id="mobileTransformersMenu">
+            <a href="../solar-inverter-transformers-epc.html">Solar Inverter Transformers (Step-Up)</a>
+            <a href="../steel-furnace-transformers.html">Steel Furnace Transformers (OFWF)</a>
+            <a href="../dry-type-cast-resin-transformers.html">Cast Resin Dry-Type (Fire-Safe)</a>
+            <a href="../high-voltage-power-transformers.html">High-Voltage Power (1MVA–40MVA)</a>
+            <a href="../new-used-transformers.html">Distribution (New &amp; Certified-Used)</a>
+          </div>
+        </div>
+        <a href="../turnkey-substation-epc.html">Turnkey Substation EPC</a>
+        <a href="../transformer-repair.html">Transformer Repair &amp; Rewinding</a>
+        <a href="../oil-dehydration.html">Oil Dehydration &amp; Filtration</a>
+        <a href="../preventive-maintenance-amc.html">Maintenance &amp; AMC Contracts</a>
+        <a href="../town-electrification.html">Town Electrification</a>
+        <div class="nav__mobile-sub-group">
+          <div class="nav__mobile-sub-row">
+            <a href="../testing-commissioning.html" class="nav__mobile-sub-link">Testing &amp; Commissioning</a>
+            <button class="nav__mobile-nested-toggle" id="mobileTestingBtn" aria-label="Toggle Testing Services Submenu" aria-expanded="false">▾</button>
+          </div>
+          <div class="nav__mobile-nested" id="mobileTestingMenu">
+            <a href="../insulation-resistance-testing.html">Insulation Resistance Testing</a>
+            <a href="../transformer-testing.html">Transformer Diagnostic Testing</a>
+            <a href="../high-voltage-testing.html">High Voltage (Hipot) Testing</a>
+            <a href="../protection-relay-testing.html">Protection Relay Testing</a>
+            <a href="../thermal-imaging.html">Thermal Imaging Inspection</a>
+            <a href="../circuit-breaker-testing.html">Circuit Breaker Testing</a>
+            <a href="../generator-testing.html">Generator &amp; Load Bank Testing</a>
+            <a href="../power-quality-analysis.html">Power Quality Analysis</a>
+            <a href="../earth-ground-testing.html">Earth Ground Testing</a>
+            <a href="../underground-cable-testing.html">Underground Cable Testing</a>
+            <a href="../motor-load-testing.html">Motor &amp; Load Testing</a>
+            <a href="../control-system-testing.html">Control System Testing</a>
+            <a href="../pre-commissioning-checks.html">Pre-Commissioning Checks</a>
+            <a href="../electrical-commissioning.html">Electrical Commissioning</a>
+            <a href="../continuity-testing.html">Continuity Testing</a>
+          </div>
+        </div>
+        <a href="../ht-lt-panel-installation.html">HT / LT Panel Installation</a>
+        <a href="../spare-parts.html">Spare Parts &amp; Supplies</a>
+      </div>
+    </div>
+    <a href="../index.html#process">Process</a>
+    <a href="../index.html#faq">FAQ</a>
+    <a href="../contact-us.html">Contact</a>
+    <a href="../contact-us.html" class="btn btn--solid">Get Wholesale Quote</a>
+    <a href="tel:+923144641288" class="nav__mobile-call"><span class="nav__mobile-call-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z" fill="currentColor"/></svg></span>Call Us: 0314 4641288</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ BREADCRUMB ============ -->
+<div class="sheet">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">Home</a>
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <a href="../blog.html">Blog</a>
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <span aria-current="page">DGA Gas Testing & SFRA for Power Transformers</span>
+  </nav>
+</div>
+
+<!-- ============ POST HERO ============ -->
+<section class="post-hero">
+  <div class="sheet">
+    <div class="post-hero__top">
+      <div class="post-hero__meta">
+        <span class="blog-card__cat">Predictive Diagnostics</span>
+        <span class="blog-card__date">August 27, 2026</span>
+        <span class="blog-card__date">15 min read</span>
+      </div>
+      <h1 style="font-family:var(--cond);font-weight:600;font-size:clamp(30px,4.2vw,50px);line-height:1.06;letter-spacing:-.01em;max-width:30ch;">Predicting MVA Power Transformer Failures — <em style="font-style:normal;color:var(--accent-ink);">Duval DGA & SFRA testing in Pakistan</em></h1>
+      <p class="svc-hero__sub" style="margin-top:20px;">Predict MVA power transformer failures in Pakistan using Dissolved Gas Analysis (DGA), Duval Triangle, and Sweep Frequency Response Analysis (SFRA).</p>
+    </div>
+  </div>
+  <div class="post-hero__banner">
+    <img src="../images/transformer-dga-testing.jpg" alt="DGA Gas Testing & SFRA for Power Transformers">
+  </div>
+</section>
+
+<!-- ============ POST BODY ============ -->
+<article class="post-body">
+
+  <!-- BLUF Answer Box for Search Citation -->
+  <blockquote style="border-left:4px solid var(--accent);background:var(--accent-soft);padding:18px 22px;margin-bottom:32px;">
+    <p style="font-family:var(--sans);font-weight:500;font-size:16px;line-height:1.6;color:var(--ink);"><strong>Direct Engineering Answer:</strong> Dissolved Gas Analysis (DGA) interprets fault gases (Acetylene C2H2 for arcing, Ethylene C2H4 for high-temperature thermal faults >700°C) dissolved in transformer oil using Duval Triangle ratios. Sweep Frequency Response Analysis (SFRA) injects 20Hz–2MHz frequency sweeps to detect sub-millimeter mechanical winding deformation without un-tanking the transformer.</p>
+  </blockquote>
+
+  <!-- Table of Contents -->
+  <nav class="post-toc" aria-label="Table of contents">
+    <div class="post-toc__title">In This Article</div>
+    <ol>
+      <li><a href="#sec-1">1. The High Stakes of High-Voltage Transformer Asset Management</a></li>
+      <li><a href="#sec-2">2. Chemical Physics of Transformer Oil Degradation & Gas Generation</a></li>
+      <li><a href="#sec-3">3. Key Diagnostic Fault Gases: Hydrogen, Hydrocarbons & Carbon Oxides</a></li>
+      <li><a href="#sec-4">4. International Gas Concentration Action Limits (IEEE C57.104 & IEC 60599)</a></li>
+      <li><a href="#sec-5">5. Advanced Graphical Diagnostics: Duval Triangle 1, 4 & 5 Methods</a></li>
+      <li><a href="#sec-6">6. Sweep Frequency Response Analysis (SFRA): Principles & Physics</a></li>
+      <li><a href="#sec-7">7. Interpreting SFRA Frequency Bands (Core, Windings & Bushing Leads)</a></li>
+      <li><a href="#sec-8">8. Dielectric Frequency Response (DFR) & Insulation Moisture Mapping</a></li>
+      <li><a href="#sec-9">9. Case Study: Early Fault Detection in a 10 MVA Textile Substation</a></li>
+      <li><a href="#sec-10">10. TransfoLine Certified Mobile Testing Laboratory Services</a></li>
+      <li><a href="#faq">Frequently Asked Questions</a></li>
+    </ol>
+  </nav>
+
+  
+  <h2 id="sec-1">1. The High Stakes of High-Voltage Transformer Asset Management</h2>
+  <p>In Pakistan's power generation, transmission, and heavy manufacturing sectors—including IPPs, 132kV grid stations, composite textile complexes in Faisalabad, and chemical refineries in Port Qasim—power transformers rated between 2.5 MVA and 40 MVA are the most critical and expensive capital assets in the entire electrical distribution network. A single catastrophic internal failure can result in equipment replacement costs exceeding 30 to 60 Million PKR, hazardous fire hazards, and weeks of catastrophic factory production downtime.</p>
+  <p>Traditional time-based preventative maintenance—such as periodic insulation resistance (Megger) checks and basic oil breakdown voltage (BDV) tests—is reactive and incapable of detecting early-stage incipient thermal faults, low-energy dielectric tracking, or sub-millimeter mechanical winding distortion. To safeguard critical assets, modern industrial plants deploy advanced <b>Condition-Based Predictive Maintenance</b> powered by <b>Dissolved Gas Analysis (DGA)</b> and <b>Sweep Frequency Response Analysis (SFRA)</b>. Explore our complete <a href="../high-voltage-power-transformers.html">high-voltage power transformers</a> catalog and diagnostic capabilities.</p>
+
+  <h2 id="sec-2">2. Chemical Physics of Transformer Oil Degradation &amp; Gas Generation</h2>
+  <p>Transformer mineral insulating oil is composed of a complex mixture of hydrocarbon molecules (paraffinic, naphthenic, and aromatic ring structures). Under normal operating conditions, these chemical bonds are highly stable. However, when abnormal electrical or thermal stresses occur inside the transformer tank—such as partial discharge corona, localized hotspots, or high-energy power arcs—the hydrocarbon bonds break apart via homolytic thermal and electrical cracking.</p>
+  <p>As the free radical fragments recombine, specific combustible fault gases dissolve directly into the liquid dielectric oil. Similarly, thermal breakdown of solid kraft paper and pressboard insulation releases carbon oxides ($CO$ and $CO_2$) and furanic compounds. By capturing oil samples in gastight glass syringes and analyzing gas concentrations down to parts-per-million (ppm) using Gas Chromatography (GC), electrical engineers can accurately diagnose the exact nature, severity, and development rate of internal faults.</p>
+
+  <h2 id="sec-3">3. Key Diagnostic Fault Gases: Hydrogen, Hydrocarbons &amp; Carbon Oxides</h2>
+  <p>Different fault mechanisms produce distinct gas fingerprints depending on the energy density and temperature of the fault zone:</p>
+  <div style="overflow-x:auto;margin:24px 0;">
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Fault Gas Molecule</th>
+          <th>Chemical Symbol</th>
+          <th>Generation Mechanism &amp; Fault Type</th>
+          <th>Typical Alert Limit (ppm)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Hydrogen</b></td><td>H2</td><td>Corona partial discharge; low-energy electrical tracking; electrolytic reactions</td><td>&gt; 100 ppm</td></tr>
+        <tr><td><b>Methane</b></td><td>CH4</td><td>Low-temperature thermal overheating in oil (&lt; 300°C)</td><td>&gt; 120 ppm</td></tr>
+        <tr><td><b>Ethane</b></td><td>C2H6</td><td>Medium-temperature thermal oil fault (300°C – 700°C)</td><td>&gt; 65 ppm</td></tr>
+        <tr><td><b>Ethylene</b></td><td>C2H4</td><td><b>Severe high-temperature thermal fault (&gt; 700°C) in core or winding copper</b></td><td>&gt; 50 ppm</td></tr>
+        <tr><td><b>Acetylene</b></td><td>C2H2</td><td><b>High-energy electrical arcing, flashover, or OLTC leakage (CRITICAL)</b></td><td><b>&gt; 2 ppm</b></td></tr>
+        <tr><td><b>Carbon Monoxide</b></td><td>CO</td><td>Thermal degradation of solid cellulose paper insulation</td><td>&gt; 350 ppm</td></tr>
+        <tr><td><b>Carbon Dioxide</b></td><td>CO2</td><td>Normal paper aging; CO2/CO ratio &lt; 3 indicates severe paper burning</td><td>&gt; 2,500 ppm</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="sec-4">4. International Gas Concentration Action Limits (IEEE C57.104 &amp; IEC 60599)</h2>
+  <p>International standard <b>IEEE C57.104-2019</b> categorizes transformer condition into four distinct risk status levels based on Total Dissolved Combustible Gas (TDCG) volume and 90th percentile gas generation rates:</p>
+  <ul>
+    <li><b>Condition 1 (Normal):</b> TDCG &le; 720 ppm. Transformer is operating satisfactorily; continue routine annual sampling.</li>
+    <li><b>Condition 2 (Warning):</b> TDCG 721 – 1,920 ppm. Elevated combustible gas levels present; increase sampling frequency to quarterly and conduct acoustic partial discharge mapping.</li>
+    <li><b>Condition 3 (High Risk):</b> TDCG 1,921 – 4,630 ppm. Significant incipient fault active; schedule immediate thermal imaging, power factor testing, and plan for load reduction.</li>
+    <li><b>Condition 4 (Extreme Hazard):</b> TDCG &gt; 4,630 ppm or Acetylene &gt; 35 ppm. Imminent transformer failure; de-energize unit immediately for inspection and internal overhaul.</li>
+  </ul>
+
+  <h2 id="sec-5">5. Advanced Graphical Diagnostics: Duval Triangle 1, 4 &amp; 5 Methods</h2>
+  <p>Gas concentration values alone do not reveal the exact fault type. Michel Duval developed the <b>Duval Triangle Graphical Method (IEC 60599)</b>, which plots the relative percentage concentrations of three key hydrocarbon gases (%CH<sub>4</sub>, %C<sub>2</sub>H<sub>4</sub>, %C<sub>2</sub>H<sub>2</sub>) on a triangular coordinate plane:</p>
+  <ul>
+    <li><b>Zone PD (Partial Discharge):</b> High Hydrogen/Methane ratio; cold electrical breakdown in gas bubbles or void voids.</li>
+    <li><b>Zone T1 (&lt;300°C):</b> Thermal fault in oil; loose connections, core circulating currents.</li>
+    <li><b>Zone T2 (300°C–700°C):</b> Medium thermal fault; eddy currents in structural steel clamps, magnetic flux shunts.</li>
+    <li><b>Zone T3 (&gt;700°C):</b> Severe thermal hotspot; melting of copper conductors or magnetic core laminations.</li>
+    <li><b>Zone D1 (Low Energy Discharge):</b> Dielectric sparking, tracking in pressboard barriers.</li>
+    <li><b>Zone D2 (High Energy Discharge):</b> Sustained power arcing, winding turn-to-turn short-circuit flashover.</li>
+  </ul>
+
+  <h2 id="sec-6">6. Sweep Frequency Response Analysis (SFRA): Principles &amp; Physics</h2>
+  <p>While DGA evaluates chemical degradation, <b>Sweep Frequency Response Analysis (SFRA per IEC 60076-18)</b> is the most sensitive non-destructive electrical test for detecting physical mechanical deformation of transformer cores and windings. An assembled transformer winding represents a distributed electrical network of series resistances ($R$), self and mutual inductances ($L$), and ground-to-turn capacitances ($C$).</p>
+  <p>During an SFRA test, a precision frequency generator injects a low-voltage sinusoidal test signal (typically 0.2V to 10V RMS) across the winding terminals while sweeping across a wide frequency range from <b>20 Hz to 2 MHz</b>. A high-speed digital receiver measures the output amplitude and phase angle, generating a unique transfer function magnitude response curve ($20 \log_{10}(V_{	ext{out}} / V_{	ext{in}})	ext{ in dB}$ vs frequency).</p>
+
+  <h2 id="sec-7">7. Interpreting SFRA Frequency Bands (Core, Windings &amp; Bushing Leads)</h2>
+  <p>The resulting SFRA Bode plot is divided into distinct frequency sub-bands, each sensitive to specific physical components inside the transformer:</p>
+  <div style="overflow-x:auto;margin:24px 0;">
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Frequency Sub-Band</th>
+          <th>Dominant Electrical Component</th>
+          <th>Physical Fault Types Detected</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><b>Low Frequency (&lt; 2 kHz)</b></td><td>Core Magnetizing Inductance ($L_m$)</td><td>Core lamination short-circuits, shifted core limbs, multiple core earthing defects.</td></tr>
+        <tr><td><b>Medium-Low (2 kHz – 20 kHz)</b></td><td>Mutual Inductances between Coils</td><td>Radial hoop stress winding deformation, bulk axial winding displacement.</td></tr>
+        <tr><td><b>Medium-High (20 kHz – 400 kHz)</b></td><td>Inter-Turn &amp; Inter-Disk Capacitances</td><td>Local winding buckling, disk tilting, spacer collapse, turn-to-turn insulation shifts.</td></tr>
+        <tr><td><b>High Frequency (&gt; 400 kHz)</b></td><td>Lead &amp; Bushing Stray Capacitances</td><td>High-voltage lead shifting, internal tap lead movement, bushing shield defects.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="sec-8">8. Dielectric Frequency Response (DFR) &amp; Insulation Moisture Mapping</h2>
+  <p>In addition to DGA and SFRA, TransfoLine performs advanced <b>Dielectric Frequency Response (DFR / FDS)</b> using OMICRON DIRANA test sets. DFR accurately quantifies the exact percentage of moisture trapped inside the solid cellulose insulation pressboard (e.g. 1.2% dry vs 3.8% saturated) independent of oil temperature, allowing plant managers to schedule targeted vacuum drying before insulation aging becomes irreversible. Discover our <a href="../oil-dehydration.html">on-site oil dehydration services</a>.</p>
+
+  <h2 id="sec-9">9. Case Study: Early Fault Detection in a 10 MVA Textile Substation</h2>
+  <p>During a routine predictive maintenance audit at a 10 MVA 132/11kV substation in Faisalabad, TransfoLine engineers identified a sudden spike in Acetylene ($C_2H_2 = 14	ext{ ppm}$) and Ethylene ($C_2H_4 = 85	ext{ ppm}$). SFRA testing revealed a significant resonance shift in the medium-frequency band (65 kHz) on Phase W.</p>
+  <p>Immediate endoscopic tank inspection revealed that a mechanical clamping bolt had worked loose during an external transmission line fault, allowing the Phase W high-voltage coil to vibrate and arc against the core frame. Catching the defect prevented a full coil blowout, saving the mill over <b>45 Million PKR in catastrophic replacement costs</b>.</p>
+
+  <h2 id="sec-10">10. TransfoLine Certified Mobile Testing Laboratory Services</h2>
+  <p>TransfoLine operates specialized mobile diagnostic vans equipped with calibrated OMICRON FRANEO 800, DIRANA, and BAUR precision testing instruments. We provide on-site DGA, SFRA, Tan Delta, and dielectric recovery services across all industrial corridors in Pakistan. Learn more about our comprehensive <a href="../testing-commissioning.html">16 certified electrical testing procedures</a>.</p>
+        
+
+  <!-- FAQ SECTION -->
+  <h2 id="faq">Frequently Asked Questions</h2>
+  <div class="faq-list" style="margin:24px 0;">
+    <details class="faq">
+      <summary><span class="faq__c">FAQ</span> What is the most critical fault gas in transformer oil DGA?<span class="faq__s" aria-hidden="true"></span></summary>
+      <p class="faq__a">Acetylene (C2H2) is the most critical gas; any concentration above 2 to 5 ppm proves active, high-energy electrical arcing inside the transformer tank.</p>
+    </details>
+    <details class="faq">
+      <summary><span class="faq__c">FAQ</span> How does SFRA detect mechanical winding damage?<span class="faq__s" aria-hidden="true"></span></summary>
+      <p class="faq__a">SFRA injects high-frequency sweeps (20Hz–2MHz) to map the winding's electrical transfer function; shifts in resonant peak frequencies prove physical coil displacement or core deformation.</p>
+    </details>
+    <details class="faq">
+      <summary><span class="faq__c">FAQ</span> How often should DGA testing be conducted in industrial facilities?<span class="faq__s" aria-hidden="true"></span></summary>
+      <p class="faq__a">For critical industrial transformers, DGA should be conducted every 6 months, or immediately following an upstream short-circuit fault trip.</p>
+    </details>
+    <details class="faq">
+      <summary><span class="faq__c">FAQ</span> What is an acceptable Tan Delta value for a power transformer?<span class="faq__s" aria-hidden="true"></span></summary>
+      <p class="faq__a">For new oil-immersed power transformers at 20°C, Tan Delta should be &le; 0.5%; values exceeding 1.0% indicate moisture contamination or aging.</p>
+    </details>
+    <details class="faq">
+      <summary><span class="faq__c">FAQ</span> Can TransfoLine perform DGA testing without taking the transformer off-line?<span class="faq__s" aria-hidden="true"></span></summary>
+      <p class="faq__a">Yes, oil sampling for DGA is performed safely via hermetic syringes while the transformer is energized and delivering full load current.</p>
+    </details>
+  </div>
+
+  <!-- CONVERSION CTA -->
+  <div class="post-cta" style="background:var(--surface);border:2px solid var(--accent);padding:clamp(22px,3.2vw,36px);margin:48px 0 20px;">
+    <h3 style="color:var(--ink);margin-top:0;font-size:22px;">Need Direct Technical Assistance or a Factory-Direct Quote?</h3>
+    <p style="color:var(--ink-light);margin-bottom:20px;font-size:15px;line-height:1.6;">TransfoLine supplies, installs, overhauls, and repairs heavy industrial transformers across Pakistan with nationwide 48-hour delivery, genuine WAPDA P-10 compliance, and 12-month full warranty.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+      <a href="../high-voltage-power-transformers.html" class="btn btn--solid">Explore High-Voltage Power Transformers <span class="ar">→</span></a>
+      <a href="tel:+923144641288" class="btn btn--line" style="color:var(--ink);border-color:var(--line-strong);">Call 0314 4641288 <span class="ar">→</span></a>
+    </div>
+  </div>
+
+</article>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="sheet">
+    <!-- FOOTER TOP: BRAND, DIRECT CONTACT & SOCIALS -->
+    <div class="footer__top">
+      <div class="footer__brand-box">
+        <a href="../index.html#top" class="brand"><img src="../images/transfoline-logo.webp" alt="TransfoLine" class="brand__logo1"></a>
+        <p>TransfoLine (Private) Limited — Pakistan's premier turnkey industrial solar EPC contractor, high-voltage substation manufacturer, and certified testing specialist since 2008.</p>
+      </div>
+      <div class="footer__top-contact">
+        <div class="footer__direct-links">
+          <a href="tel:+923144641288" class="footer__c-item"><span class="sq"></span> 0314 4641288</a>
+          <a href="mailto:info@transfoline.com.pk" class="footer__c-item"><span class="sq"></span> info@transfoline.com.pk</a>
+          <span class="footer__c-item"><span class="sq"></span> Raiwind Road, Lahore</span>
+        </div>
+        <div class="footer__socials">
+          <a href="https://pk.linkedin.com/company/transfoline" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45c-.88 0-1.6.72-1.6 1.6 0 .89.72 1.6 1.6 1.6.89 0 1.61-.71 1.61-1.6 0-.88-.72-1.6-1.61-1.6Z"/></svg> LinkedIn</a>
+          <a href="https://www.facebook.com/p/Transfo-Line-100089514231981/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z"/></svg> Facebook</a>
+          <span class="stat-tag is-ok">24/7 Support</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN 4 EQUAL-HEIGHT COLUMNS -->
+    <div class="footer__grid">
+      <!-- COLUMN 1: TRANSFORMERS -->
+      <div class="footer__col">
+        <h4>Transformers</h4>
+        <div class="footer__links">
+          <a href="../new-used-transformers.html">New &amp; Certified-Used</a>
+          <a href="../solar-inverter-transformers-epc.html">Solar Step-Up Transformers</a>
+          <a href="../steel-furnace-transformers.html">Steel Furnace Transformers (OFWF)</a>
+          <a href="../dry-type-cast-resin-transformers.html">Cast Resin Dry-Type</a>
+          <a href="../high-voltage-power-transformers.html">High-Voltage Power (MVA)</a>
+          <a href="../spare-parts.html">Spare Parts &amp; Supplies</a>
+        </div>
+      </div>
+
+      <!-- COLUMN 2: ENGINEERING & EPC -->
+      <div class="footer__col">
+        <h4>Engineering &amp; EPC</h4>
+        <div class="footer__links">
+          <a href="../turnkey-substation-epc.html">Turnkey Substation EPC</a>
+          <a href="../transformer-repair.html">Repair &amp; Rewinding</a>
+          <a href="../oil-dehydration.html">Oil Dehydration &amp; BDV</a>
+          <a href="../preventive-maintenance-amc.html">Maintenance &amp; AMC</a>
+          <a href="../ht-lt-panel-installation.html">HT / LT Panel Installation</a>
+          <a href="../town-electrification.html">Town Electrification</a>
+          <a href="../testing-commissioning.html">Testing &amp; Commissioning</a>
+        </div>
+      </div>
+
+      <!-- COLUMN 3: SOLAR & RENEWABLE -->
+      <div class="footer__col">
+        <h4>Solar &amp; Renewable</h4>
+        <div class="footer__links">
+          <a href="../solar-energy-solutions.html">Commercial &amp; Industrial Solar</a>
+          <a href="../solar-panels-inverters-cables.html">Panels, Inverters &amp; Cables</a>
+          <a href="../100kw-solar-system-price-pakistan.html">100 kW Commercial System</a>
+          <a href="../500kw-industrial-solar-system.html">500 kW Industrial Substation</a>
+          <a href="../1mw-solar-power-plant-pakistan.html">1 MW to 5 MW Solar Plants</a>
+          <a href="../ev-charging-solutions-pakistan.html">Commercial EV Fast Charging</a>
+          <a href="../calculators.html" style="color:var(--accent-ink);font-weight:600;">Engineering Calculators Hub <span class="ar">→</span></a>
+        </div>
+      </div>
+
+      <!-- COLUMN 4: KNOWLEDGE & HUBS -->
+      <div class="footer__col">
+        <h4>Knowledge &amp; Cities</h4>
+        <div class="footer__links">
+          <a href="../blog.html" style="color:var(--accent-ink);font-weight:600;">Blog &amp; Knowledge Hub <span class="ar">→</span></a>
+          <a href="../transformer-services-lahore.html">Lahore (Head Office)</a>
+          <a href="../transformer-services-karachi.html">Karachi Coastal Division</a>
+          <a href="../transformer-services-islamabad.html">Islamabad Capital Hub</a>
+          <a href="../transformer-services-rawalpindi.html">Rawalpindi Industrial</a>
+          <a href="../transformer-services-faisalabad.html">Faisalabad Textile Hub</a>
+          <a href="../transformer-services-multan.html">Multan &amp; South Punjab</a>
+          <a href="../transformer-services-gilgit.html">Gilgit &amp; Northern Areas</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER BASE -->
+    <div class="footer__base">
+      <span>© 2026 TRANSFO LINE (PRIVATE) LIMITED</span>
+      <span>D-U-N-S® Registered: <a href="https://www.dnb.com/business-directory/company-profiles.transfo_line_(private)_limited.6e4d401fc4a6bd30db45ae2a751837d4.html" target="_blank" rel="noopener" class="footer__credit">75-794-4658</a></span>
+      <span>Designed &amp; Developed by <a href="https://webcraftio.com" target="_blank" rel="noopener" class="footer__credit">WebCraftio</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============ BOTTOM CALL BAR ============ -->
+<div class="bottom-call-bar">
+  <a href="tel:+923144641288" class="bottom-call-btn" aria-label="Call TransfoLine 0314 4641288">
+    <span class="bottom-call-btn__icon">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z" fill="currentColor"/></svg>
+    </span>
+    <span class="bottom-call-btn__text">
+      <span class="bottom-call-btn__tag"><span class="bottom-call-btn__dot"></span> Testing Helpline</span>
+      <span class="bottom-call-btn__number">0314 4641288</span>
+    </span>
+    <span class="bottom-call-btn__action">Call Now <span class="bottom-call-btn__arr">→</span></span>
+  </a>
+</div>
+
+<!-- ============ FLOATING BUTTONS ============ -->
+<div class="float-btns">
+  <a href="tel:+923144641288" class="call-float" aria-label="Call TransfoLine">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z" fill="currentColor"/></svg>
+  </a>
+  <a href="https://wa.me/923144641288" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="none"><path d="M16.004 2.667A13.28 13.28 0 0 0 2.73 15.942a13.2 13.2 0 0 0 1.79 6.628L2.667 29.333l6.96-1.825A13.28 13.28 0 0 0 16.004 29.3 13.32 13.32 0 1 0 16.004 2.667Zm0 24.32a11 11 0 0 1-5.61-1.535l-.402-.24-4.17 1.094 1.113-4.07-.262-.418a10.96 10.96 0 0 1-1.684-5.876A11.02 11.02 0 1 1 16.004 26.987Zm6.044-8.244c-.332-.166-1.963-.968-2.267-1.08-.305-.11-.526-.166-.748.167s-.858 1.08-1.052 1.3c-.194.222-.387.25-.72.084a9.1 9.1 0 0 1-2.675-1.65 10 10 0 0 1-1.85-2.303c-.194-.333-.02-.513.146-.678.149-.15.332-.388.498-.582.166-.194.222-.333.332-.555.111-.222.056-.416-.028-.582s-.748-1.803-1.025-2.47c-.27-.648-.544-.56-.748-.57l-.637-.012a1.22 1.22 0 0 0-.886.416c-.305.333-1.163 1.136-1.163 2.77s1.19 3.213 1.357 3.435c.166.222 2.342 3.575 5.675 5.014.793.342 1.412.547 1.894.7.796.253 1.52.217 2.093.131.639-.095 1.963-.803 2.24-1.578.277-.775.277-1.44.194-1.578-.083-.139-.305-.222-.637-.389Z" fill="currentColor"/></svg>
+  </a>
+</div>
+
+<script src="../app.js"></script>
+<script src="../tracking.js"></script>
+</body>
+</html>
+
+</body>
+</html>

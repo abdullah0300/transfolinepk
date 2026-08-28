@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GT-MK4LGQ9D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GT-MK4LGQ9D');
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x1wrvodwit");
+</script>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="/images/transfoline_logo-removebg-preview.png">
+<link rel="apple-touch-icon" href="/images/transfoline_logo-removebg-preview.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>Induction Furnace Transformer Sizing Guide | PK</title>
+<meta name="description" content="Calculate transformer kVA for induction melting furnaces in Pakistan (1-ton to 10-ton). Formula, power factor margins, and steel mill substation specs.">
+<meta name="keywords" content="induction furnace transformer kva calculation, 1 ton induction furnace power requirement, 5 ton furnace transformer kva, steel furnace transformer sizing, steel melting substation design lahore">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="TransfoLine Engineering Division">
+<link rel="canonical" href="https://transfoline.com.pk/blog/induction-furnace-transformer-kva-sizing-guide.html">
+
+<!-- Geo / Language -->
+<meta name="geo.region" content="PK-PB">
+<meta name="geo.placename" content="Lahore">
+<meta name="geo.position" content="31.4504;74.3587">
+<meta name="ICBM" content="31.4504, 74.3587">
+<meta name="language" content="English">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="TransfoLine">
+<meta property="og:title" content="Induction Furnace Transformer Sizing Guide | TransfoLine">
+<meta property="og:description" content="Calculate transformer kVA for induction melting furnaces in Pakistan (1-ton to 10-ton). Formula, power factor margins, and steel mill substation specs.">
+<meta property="og:url" content="https://transfoline.com.pk/blog/induction-furnace-transformer-kva-sizing-guide.html">
+<meta property="og:image" content="https://transfoline.com.pk/images/furnace-transformer-sizing.jpg">
+<meta property="og:locale" content="en_PK">
+
+<!-- Structured Data: BlogPosting, BreadcrumbList, FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Induction Furnace Transformer Sizing Guide",
+      "description": "Calculate transformer kVA for induction melting furnaces in Pakistan (1-ton to 10-ton). Formula, power factor margins, and steel mill substation specs.",
+      "image": "https://transfoline.com.pk/images/furnace-transformer-sizing.jpg",
+      "datePublished": "2026-08-25",
+      "dateModified": "2026-08-27",
+      "author": {
+        "@type": "Organization",
+        "name": "TransfoLine Engineering Division",
+        "url": "https://transfoline.com.pk"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "TransfoLine",
+        "url": "https://transfoline.com.pk",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://transfoline.com.pk/images/transfoline-logo.webp"
+        }
+      },
+      "mainEntityOfPage": "https://transfoline.com.pk/blog/induction-furnace-transformer-kva-sizing-guide.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://transfoline.com.pk/"},
+        {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://transfoline.com.pk/blog.html"},
+        {"@type": "ListItem", "position": 3, "name": "Induction Furnace Transformer Sizing Guide"}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What size transformer is needed for a 1-ton induction furnace in Pakistan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A 1-ton crucible typically requires a 1,000 kVA to 1,250 kVA OFWF water-cooled transformer connected to an 11kV primary distribution feeder."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the typical electricity consumption per ton of liquid steel?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modern medium-frequency solid-state induction furnaces consume between 550 kWh to 620 kWh per metric ton of melted steel scrap."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is OFWF water cooling preferred over standard radiator air cooling for furnaces?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "OFWF cooling dissipates massive continuous heat loads in a compact footprint and maintains safe operating oil temperatures (<75°C) even during 48°C Pakistani summer heatwaves."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if an induction furnace operates with an undersized transformer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The transformer core will saturate and windings will overheat, causing frequent 11kV VCB breaker trips, extended heat melting times, and rapid cellulose paper degradation leading to coil blowout."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can TransfoLine deliver emergency replacement furnace transformers in Pakistan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, TransfoLine maintains 50+ tested units in stock and dispatches emergency replacement transformers across Punjab and Sindh within 24 to 48 hours."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="sheet nav__in">
+    <a href="../index.html" class="brand" aria-label="TransfoLine home">
+      <img src="../images/transfoline-logo.webp" alt="TransfoLine" class="brand__logo">
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#why">Why Us</a>
+      <div class="nav__dropdown">
+        <a href="../index.html#services" class="nav__drop-trigger">Services <span class="nav__arrow">▾</span></a>
+                                                                                <div class="nav__drop-menu mega-menu">
+          <!-- COLUMN 1: TRANSFORMERS -->
+          <div class="mega-col">
+            <div class="mega-col__title">Transformers</div>
+            <div class="mega-col__list">
+              <a href="../new-used-transformers.html" class="mega-link">New &amp; Certified-Used Transformers</a>
+              <a href="../solar-inverter-transformers-epc.html" class="mega-link">Solar Inverter Step-Up Transformers</a>
+              <a href="../steel-furnace-transformers.html" class="mega-link">Steel Furnace Transformers (OFWF)</a>
+              <a href="../dry-type-cast-resin-transformers.html" class="mega-link">Cast Resin Dry-Type Transformers</a>
+              <a href="../high-voltage-power-transformers.html" class="mega-link">High-Voltage Power Transformers (MVA)</a>
+              <a href="../spare-parts.html" class="mega-link">Transformer Spare Parts &amp; Supplies</a>
+            </div>
+          </div>
+
+          <!-- COLUMN 2: ENGINEERING SERVICES (BEFORE SOLAR) -->
+          <div class="mega-col">
+            <div class="mega-col__title">Engineering Services</div>
+            <div class="mega-col__list">
+              <a href="../turnkey-substation-epc.html" class="mega-link">Turnkey Substation EPC (11kV/132kV)</a>
+              <a href="../transformer-repair.html" class="mega-link">Transformer Repair &amp; Rewinding</a>
+              <a href="../oil-dehydration.html" class="mega-link">Oil Dehydration &amp; BDV Filtration</a>
+              <a href="../preventive-maintenance-amc.html" class="mega-link">Maintenance &amp; AMC Contracts</a>
+              <a href="../ht-lt-panel-installation.html" class="mega-link">HT / LT Panel Installation</a>
+              <a href="../town-electrification.html" class="mega-link">Town Electrification</a>
+            </div>
+          </div>
+
+          <!-- COLUMN 3: SOLAR & RENEWABLE -->
+          <div class="mega-col">
+            <div class="mega-col__title">Solar &amp; Renewable</div>
+            <div class="mega-col__list">
+              <a href="../solar-energy-solutions.html" class="mega-link">Commercial &amp; Industrial Solar EPC</a>
+              <a href="../solar-panels-inverters-cables.html" class="mega-link">Solar Panels, Inverters &amp; Cables</a>
+              <a href="../100kw-solar-system-price-pakistan.html" class="mega-link">100 kW Commercial System</a>
+              <a href="../500kw-industrial-solar-system.html" class="mega-link">500 kW Industrial Substation</a>
+              <a href="../1mw-solar-power-plant-pakistan.html" class="mega-link">1 MW to 5 MW Solar Power Plants</a>
+              <a href="../ev-charging-solutions-pakistan.html" class="mega-link">Commercial EV Fast Charging</a>
+            </div>
+          </div>
+
+          <!-- COLUMN 4: TESTING & DIAGNOSTICS -->
+          <div class="mega-col">
+            <div class="mega-col__title">Testing &amp; Diagnostics</div>
+            <div class="mega-col__list">
+              <a href="../insulation-resistance-testing.html" class="mega-link">Insulation Resistance Testing (Megger)</a>
+              <a href="../transformer-testing.html" class="mega-link">Transformer Diagnostic Testing (DGA)</a>
+              <a href="../high-voltage-testing.html" class="mega-link">High Voltage (Hipot) Testing</a>
+              <a href="../protection-relay-testing.html" class="mega-link">Protection Relay Testing</a>
+              <a href="../thermal-imaging.html" class="mega-link">Thermal Imaging Inspection (FLIR)</a>
+              <a href="../circuit-breaker-testing.html" class="mega-link">Circuit Breaker Testing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="../calculators.html">Calculators</a>
+      <a href="../index.html#process">Process</a>
+      <a href="../index.html#faq">FAQ</a>
+      <a href="../contact-us.html">Contact</a>
+    </nav>
+    <div class="nav__right">
+      <a href="tel:+923144641288" class="nav__tel"><span class="sq" aria-hidden="true"></span>0314 4641288</a>
+      <a href="../contact-us.html" class="btn btn--solid btn--sm">Get Quote</a>
+      <button class="nav__burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="mobileMenu">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#why">Why Us</a>
+    <a href="../calculators.html">🧮 Calculators</a>
+    <div class="nav__mobile-dropdown">
+      <button class="nav__mobile-trigger" id="mobileServicesBtn" aria-expanded="false">
+        <span>Services</span>
+        <span class="nav__mobile-arrow">▾</span>
+      </button>
+                              <div class="nav__mobile-sub" id="mobileServicesMenu">
+        <div class="nav__mobile-sub-group">
+          <div class="nav__mobile-sub-row">
+            <a href="../solar-energy-solutions.html" class="nav__mobile-sub-link">☀️ Solar &amp; Renewable EPC</a>
+            <button class="nav__mobile-nested-toggle" id="mobileSolarBtn" aria-label="Toggle Solar Submenu" aria-expanded="false">▾</button>
+          </div>
+          <div class="nav__mobile-nested" id="mobileSolarMenu">
+            <a href="../solar-energy-solutions.html">Commercial &amp; Industrial Solar EPC</a>
+            <a href="../solar-panels-inverters-cables.html">Solar Hardware (Panels, Inverters, Cables)</a>
+            <a href="../100kw-solar-system-price-pakistan.html">100 kW Commercial Solar System</a>
+            <a href="../500kw-industrial-solar-system.html">500 kW Industrial Solar Substation</a>
+            <a href="../1mw-solar-power-plant-pakistan.html">1 MW to 5 MW Solar Power Plants</a>
+            <a href="../solar-inverter-transformers-epc.html">Solar Inverter Step-Up Transformers</a>
+            <a href="../ev-charging-solutions-pakistan.html">Commercial EV Fast-Charging Stations</a>
+          </div>
+        </div>
+        <div class="nav__mobile-sub-group">
+          <div class="nav__mobile-sub-row">
+            <a href="../new-used-transformers.html" class="nav__mobile-sub-link">Industrial Transformers</a>
+            <button class="nav__mobile-nested-toggle" id="mobileTransformersBtn" aria-label="Toggle Transformers Submenu" aria-expanded="false">▾</button>
+          </div>
+          <div class="nav__mobile-nested" id="mobileTransformersMenu">
+            <a href="../solar-inverter-transformers-epc.html">Solar Inverter Transformers (Step-Up)</a>
+            <a href="../steel-furnace-transformers.html">Steel Furnace Transformers (OFWF)</a>
+            <a href="../dry-type-cast-resin-transformers.html">Cast Resin Dry-Type (Fire-Safe)</a>
+            <a href="../high-voltage-power-transformers.html">High-Voltage Power (1MVA–40MVA)</a>
+            <a href="../new-used-transformers.html">Distribution (New &amp; Certified-Used)</a>
+          </div>
+        </div>
+        <a href="../turnkey-substation-epc.html">Turnkey Substation EPC</a>
+        <a href="../transformer-repair.html">Transformer Repair &amp; Rewinding</a>
+        <a href="../oil-dehydration.html">Oil Dehydration &amp; Filtration</a>
+        <a href="../preventive-maintenance-amc.html">Maintenance &amp; AMC Contracts</a>
+        <a href="../town-electrification.html">Town Electrification</a>
+        <div class="nav__mobile-sub-group">
+          <div class="nav__mobile-sub-row">
+            <a href="../testing-commissioning.html" class="nav__mobile-sub-link">Testing &amp; Commissioning</a>
+            <button class="nav__mobile-nested-toggle" id="mobileTestingBtn" aria-label="Toggle Testing Services Submenu" aria-expanded="false">▾</button>
+          </div>
+          <div class="nav__mobile-nested" id="mobileTestingMenu">
+            <a href="../insulation-resistance-testing.html">Insulation Resistance Testing</a>
+            <a href="../transformer-testing.html">Transformer Diagnostic Testing</a>
+            <a href="../high-voltage-testing.html">High Voltage (Hipot) Testing</a>
+            <a href="../protection-relay-testing.html">Protection Relay Testing</a>
+            <a href="../thermal-imaging.html">Thermal Imaging Inspection</a>
+            <a href="../circuit-breaker-testing.html">Circuit Breaker Testing</a>
+            <a href="../generator-testing.html">Generator &amp; Load Bank Testing</a>
+            <a href="../power-quality-analysis.html">Power Quality Analysis</a>
+            <a href="../earth-ground-testing.html">Earth Ground Testing</a>
+            <a href="../underground-cable-testing.html">Underground Cable Testing</a>
+            <a href="../motor-load-testing.html">Motor &amp; Load Testing</a>
+            <a href="../control-system-testing.html">Control System Testing</a>
+            <a href="../pre-commissioning-checks.html">Pre-Commissioning Checks</a>
+            <a href="../electrical-commissioning.html">Electrical Commissioning</a>
+            <a href="../continuity-testing.html">Continuity Testing</a>
+          </div>
+        </div>
+        <a href="../ht-lt-panel-installation.html">HT / LT Panel Installation</a>
+        <a href="../spare-parts.html">Spare Parts &amp; Supplies</a>
+      </div>
+    </div>
+    <a href="../index.html#process">Process</a>
+    <a href="../index.html#faq">FAQ</a>
+    <a href="../contact-us.html">Contact</a>
+    <a href="../contact-us.html" class="btn btn--solid">Get Wholesale Quote</a>
+    <a href="tel:+923144641288" class="nav__mobile-call"><span class="nav__mobile-call-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z" fill="currentColor"/></svg></span>Call Us: 0314 4641288</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ BREADCRUMB ============ -->
+<div class="sheet">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">Home</a>
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <a href="../blog.html">Blog</a>
+    <span class="breadcrumb__sep" aria-hidden="true">/</span>
+    <span aria-current="page">Induction Furnace Transformer Sizing Guide</span>
+  </nav>
+</div>
+
+<!-- ============ POST HERO ============ -->
+<section class="post-hero">
+  <div class="sheet">
+    <div class="post-hero__top">
+      <div class="post-hero__meta">
+        <span class="blog-card__cat">Furnace Engineering</span>
+        <span class="blog-card__date">August 27, 2026</span>
+        <span class="blog-card__date">14 min read</span>
+      </div>
+      <h1 style="font-family:var(--cond);font-weight:600;font-size:clamp(30px,4.2vw,50px);line-height:1.06;letter-spacing:-.01em;max-width:30ch;">Induction Furnace Transformer Sizing — <em style="font-style:normal;color:var(--accent-ink);">kVA to tonnage calculator for Pakistani steel mills</em></h1>
+      <p class="svc-hero__sub" style="margin-top:20px;">Calculate transformer kVA for induction melting furnaces in Pakistan (1-ton to 10-ton). Formula, power factor margins, and steel mill substation specs.</p>
+    </div>
+  </div>
+  <div class="post-hero__banner">
+    <img src="../images/furnace-transformer-sizing.jpg" alt="Induction Furnace Transformer Sizing Guide">
+  </div>
+</section>
+
+<!-- ============ POST BODY ============ -->
+<article class="post-body">
+
+  <!-- BLUF Answer Box for Search Citation -->
+  <blockquote style="border-left:4px solid var(--accent);background:var(--accent-soft);padding:18px 22px;margin-bottom:32px;">
+    <p style="font-family:var(--sans);font-weight:500;font-size:16px;line-height:1.6;color:var(--ink);"><strong>Direct Engineering Answer:</strong> Sizing an induction furnace transformer requires calculating the net crucible melting power in kW (based on specific energy consumption of 550 to 620 kWh per metric ton of steel scrap), adjusting for power supply inverter efficiency (96–97%), applying an operating displacement power factor (cos phi = 0.90 to 0.95), and incorporating a 20% to 25% harmonic safety derating buffer. A 1-ton crucible typically requires a 1,000 kVA to 1,250 kVA water-cooled unit; a 5-ton crucible requires 5,000 kVA to 5,500 kVA (5.5 MVA).</p>
+  </blockquote>
+
+  <!-- Table of Contents -->
+  <nav class="post-toc" aria-label="Table of contents">
+    <div class="post-toc__title">In This Article</div>
+    <ol>
+      <li><a href="#sec-1">1. The Economics & Risks of Furnace Transformer Sizing in Pakistan</a></li>
+      <li><a href="#sec-2">2. Thermodynamics of Induction Steel Melting (kWh/Ton Standards)</a></li>
+      <li><a href="#sec-3">3. Step-by-Step Mathematical Sizing Formula & Worked Example</a></li>
+      <li><a href="#sec-4">4. Crucible Tonnage to Transformer kVA/MVA Engineering Matrix</a></li>
+      <li><a href="#sec-5">5. Managing Extreme High Secondary Current & Heavy Copper Busbars</a></li>
+      <li><a href="#sec-6">6. Harmonic Distortion (THD-I) & Transformer K-Factor Selection</a></li>
+      <li><a href="#sec-7">7. Oil Forced Water Forced (OFWF) Cooling & Heat Dissipation Sizing</a></li>
+      <li><a href="#sec-8">8. 11kV/33kV Substation Protection & VCB Switchgear Coordination</a></li>
+      <li><a href="#sec-9">9. TransfoLine Fast-Track Delivery & 50+ In-Stock Units</a></li>
+      <li><a href="#faq">Frequently Asked Questions</a></li>
+    </ol>
+  </nav>
+
+  
+  <h2 id="sec-1">1. The Economics &amp; Risks of Furnace Transformer Sizing in Pakistan</h2>
+  <p>In the heavy industrial foundry corridors of Pakistan—including Badami Bagh and Bund Road in Lahore, the G.T. Road industrial belt in Gujranwala, Sheikhupura Road, and the SITE and Korangi industrial zones in Karachi—induction melting furnaces represent the single largest electrical power consumers in any manufacturing plant. Operating around the clock, these installations melt scrap metal into high-tensile billets and foundry ingots under extreme cyclical electrical loads.</p>
+  <p>Unlike standard distribution transformers supplying continuous motor loads, an induction furnace swings from zero to 100% full-load capacity within seconds as raw scrap bridges the induction coil. Undersizing the primary transformer leads to continuous thermal tripping of 11kV vacuum circuit breakers (VCB), core saturation, and accelerated degradation of cellulose paper insulation, triggering catastrophic winding burnout within months. Conversely, over-sizing without proper harmonic filtering and reactive power management results in severe monthly kVARh low-power-factor penalties from utility distribution companies like LESCO, GEPCO, and K-Electric. For detailed ratings and unit availability, explore our dedicated <a href="../steel-furnace-transformers.html">steel furnace transformers</a> engineering center.</p>
+  <p>To establish a high-yield, uninterrupted melting operation, plant directors and chief electrical engineers must master the relationship between crucible volume, inverter frequency, power factor correction, and transformer winding thermal ratings. Sizing mistakes in multi-MVA industrial projects carry multi-million-rupee consequences, both in equipment capital costs and in devastating daily factory downtime.</p>
+
+  <h2 id="sec-2">2. Thermodynamics of Induction Steel Melting (kWh/Ton Standards)</h2>
+  <p>To accurately calculate the required electrical capacity, electrical consulting engineers begin with the fundamental thermodynamics of melting carbon steel and scrap alloy. The theoretical thermodynamic energy required to raise the temperature of 1 metric ton (1,000 kg) of steel scrap from ambient room temperature (30°C) to the standard pouring tapping temperature (1,600°C–1,650°C), including the latent heat of fusion (approx. 270 kJ/kg), is approximately <b>380 kWh per ton</b>.</p>
+  <p>However, practical industrial efficiency in Pakistani foundries is significantly lower due to inevitable energy dissipation channels:</p>
+  <ul>
+    <li><b>Crucible Radiation Losses:</b> Radiant heat escaping through open lids during charging and slag skimming accounts for 8% to 12% of total thermal energy.</li>
+    <li><b>Coil Water Cooling Losses:</b> High-frequency current circulating in copper induction coils generates I<sup>2</sup>R resistance heat, transferred directly to the coil cooling tower (15% to 18% energy loss).</li>
+    <li><b>Inverter Switching &amp; Snubber Losses:</b> Solid-state silicon SCR and IGBT rectifiers/inverters incur 3% to 4% electrical switching dissipation.</li>
+    <li><b>Thermal Conduction to Refractory Lining:</b> Heat absorbed by the rammed silica or alumina crucible lining during initial cold starts.</li>
+  </ul>
+  <p>Consequently, modern medium-frequency solid-state induction melting power supplies (typically 250 Hz to 1,000 Hz) achieve an overall specific energy consumption of <b>550 kWh to 620 kWh per metric ton of liquid steel</b> for a standard 60-minute heat cycle from cold charge to tap.</p>
+
+  <h2 id="sec-3">3. Step-by-Step Mathematical Sizing Formula &amp; Worked Example</h2>
+  <p>The total electrical power in Kilowatts (kW) delivered by the solid-state inverter to melt a specific batch capacity within a target heat cycle time (t) in hours is derived as follows:</p>
+  <div style="background:var(--card);padding:22px;border-left:4px solid var(--accent);margin:24px 0;font-family:monospace;font-size:15px;line-height:1.7;">
+    P_furnace (kW) = [ Crucible Capacity (Metric Tons) &times; Specific Energy Consumption (kWh/Ton) ] / Heat Time (Hours)
+  </div>
+  <p>Once the active power demand in kW is established, the required transformer apparent power in kVA is calculated by factoring in the power supply inverter efficiency (&eta; &approx; 0.96), operating displacement power factor (cos &phi; &approx; 0.92), and a <b>mandatory 20% harmonic derating safety buffer</b>:</p>
+  <div style="background:var(--card);padding:22px;border-left:4px solid var(--accent);margin:24px 0;font-family:monospace;font-size:15px;line-height:1.7;">
+    Transformer kVA = [ P_furnace (kW) / (&eta; &times; cos &phi;) ] &times; 1.20 (Harmonic Derating Margin)
+  </div>
+
+  <h3>Worked Engineering Example: 2.0-Ton Melting Crucible (60-Minute Cycle)</h3>
+  <p>Consider a steel re-rolling mill in Gujranwala operating a 2.0-ton coreless induction furnace targeting a 60-minute (1.0 hour) melt cycle with specific energy consumption of 580 kWh/ton:</p>
+  <ul>
+    <li><b>Active Melting Power:</b> $P = (2.0	ext{ Tons} 	imes 580	ext{ kWh/Ton}) / 1.0	ext{ hr} = 1,160	ext{ kW}$</li>
+    <li><b>Inverter DC Link &amp; Coil Losses:</b> Adjusted power input = $1,160	ext{ kW} / 0.96 = 1,208	ext{ kW}$</li>
+    <li><b>Base Apparent Power:</b> $S_{	ext{base}} = 1,208	ext{ kW} / 0.92 = 1,313	ext{ kVA}$</li>
+    <li><b>Applying Harmonic &amp; Overload Margin (1.25):</b> Required Transformer Capacity = $1,313 	imes 1.25 = \mathbf{1,641	ext{ kVA}}$</li>
+  </ul>
+  <p>In standard manufacturing practice, the facility would specify a standard <b>2,000 kVA (2.0 MVA) OFWF water-cooled furnace transformer</b> to provide head-room for cold-scrap bridging and future auxiliary ladling loads.</p>
+
+  <h2 id="sec-4">4. Crucible Tonnage to Transformer kVA/MVA Engineering Matrix</h2>
+  <p>The following engineering matrix outlines recommended transformer capacities, primary voltage levels, cooling configurations, and secondary current handling for standard induction crucible sizes in Pakistan:</p>
+  <div style="overflow-x:auto;margin:24px 0;">
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Crucible Capacity</th>
+          <th>Melt Power (kW)</th>
+          <th>Standard Transformer Rating</th>
+          <th>Primary Voltage</th>
+          <th>Secondary Voltage (LV)</th>
+          <th>Cooling Class</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><b>500 kg (0.5 Ton)</b></td><td>350 kW – 450 kW</td><td><b>500 kVA – 630 kVA</b></td><td>11 kV</td><td>415 V / 575 V</td><td>ONAN / OFWF</td></tr>
+        <tr><td><b>1.0 Ton</b></td><td>750 kW – 900 kW</td><td><b>1,000 kVA – 1,250 kVA (1.25 MVA)</b></td><td>11 kV</td><td>575 V / 660 V</td><td>OFWF (Forced Water)</td></tr>
+        <tr><td><b>2.0 Ton</b></td><td>1,500 kW – 1,800 kW</td><td><b>2,000 kVA – 2,500 kVA (2.5 MVA)</b></td><td>11 kV / 33 kV</td><td>660 V / 850 V</td><td>OFWF (Forced Water)</td></tr>
+        <tr><td><b>3.0 Ton</b></td><td>2,200 kW – 2,600 kW</td><td><b>3,000 kVA – 3,150 kVA (3.15 MVA)</b></td><td>11 kV / 33 kV</td><td>850 V / 1,000 V</td><td>OFWF Dual Cooler</td></tr>
+        <tr><td><b>5.0 Ton</b></td><td>3,500 kW – 4,200 kW</td><td><b>4,500 kVA – 5,500 kVA (5.5 MVA)</b></td><td>11 kV / 33 kV</td><td>1,000 V / 1,200 V</td><td>OFWF Dual Cooler</td></tr>
+        <tr><td><b>10.0 Ton</b></td><td>7,000 kW – 8,500 kW</td><td><b>9,000 kVA – 11,000 kVA (11 MVA)</b></td><td>33 kV / 132 kV</td><td>1,200 V / 1,500 V</td><td>OFWF Quad Cooler</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="sec-5">5. Managing Extreme High Secondary Current &amp; Heavy Copper Busbars</h2>
+  <p>One of the most defining characteristics of an induction furnace transformer is the magnitude of the secondary low-voltage current. While primary 11kV current is relatively modest (e.g. approx. 105 Amperes for a 2,000 kVA unit), the secondary winding must continuously carry <b>2,000 to 15,000 Amperes</b> depending on voltage configuration.</p>
+  <p>Standard flexible cable leads cannot withstand these high current densities. TransfoLine custom-fabricates secondary terminations using heavy electrolytic tough-pitch (ETP) 99.99% pure copper flat busbars with silver-plated contact faces. Furthermore, secondary busbars are interleaved in a non-inductive configuration to minimize stray eddy current losses and electrodynamic repulsion forces during short-circuit transients.</p>
+
+  <h2 id="sec-6">6. Harmonic Distortion (THD-I) &amp; Transformer K-Factor Selection</h2>
+  <p>Modern solid-state induction furnace inverters generate substantial non-sinusoidal currents rich in 5th, 7th, 11th, and 13th harmonic orders. In un-mitigated 6-pulse rectifier circuits, Total Harmonic Current Distortion (THD-I) can exceed 28% to 35%. Harmonic currents cause severe stray load losses in core clamps and winding conductors via skin and proximity effects.</p>
+  <p>TransfoLine furnace transformers are designed with a minimum rating of <b>K-Factor = 13 to K-Factor = 20</b>. By utilizing step-lap mitered prime CRGO magnetic cores, electrostatic copper Faraday shielding between primary and secondary windings, and transposed multi-strand conductors, our transformers operate with low thermal rise even under extreme harmonic spectrums. For comprehensive substation panel integration, see our <a href="../ht-lt-panel-installation.html">HT/LT panel installations</a>.</p>
+
+  <h2 id="sec-7">7. Oil Forced Water Forced (OFWF) Cooling &amp; Heat Dissipation Sizing</h2>
+  <p>Under continuous melting in Pakistani summer ambient temperatures exceeding 45°C, natural air radiators (ONAN) are physically incapable of dissipating the 40 kW to 120 kW of heat generated by multi-MVA furnace transformers without massive footprint expansion. TransfoLine incorporates compact <b>Oil Forced Water Forced (OFWF)</b> tubular heat exchangers:</p>
+  <ul>
+    <li><b>Positive Pressure Differential:</b> Transformer dielectric oil is maintained at 0.5 to 1.0 bar higher pressure than circulating cooling water, ensuring zero water ingress in the event of tube rupture.</li>
+    <li><b>Corrosion-Resistant Cupro-Nickel Tubes:</b> Heat exchanger tubes are manufactured from 90/10 Cupro-Nickel or heavy-gauge copper to resist raw bore water scaling.</li>
+    <li><b>Automatic Redundancy:</b> Dual 100% rated oil circulation pumps and water valves feature automatic PLC changeover upon flow failure.</li>
+  </ul>
+
+  <h2 id="sec-8">8. 11kV/33kV Substation Protection &amp; VCB Switchgear Coordination</h2>
+  <p>A furnace substation requires specialized protective relay coordination. TransfoLine integrates comprehensive primary protection including instantaneous overcurrent (50), inverse-time overcurrent (51), sensitive earth fault (50N/51N), transformer differential protection (87T), dual-float Buchholz gas surge detection, and winding temperature trip micro-switches. Discover our complete range of <a href="../turnkey-substation-epc.html">turnkey substation EPC capabilities</a>.</p>
+
+  <h2 id="sec-9">9. TransfoLine Fast-Track Delivery &amp; 50+ In-Stock Units</h2>
+  <p>When a primary furnace transformer suffers an unpredicted blowout, production halts immediately, costing millions of rupees per shift. TransfoLine maintains an inventory of over <b>50 certified new and rebuilt transformers (500 kVA to 10 MVA)</b> in Lahore, ready for dispatch within 24 to 48 hours with full WAPDA/IEC test dossiers and a 12-month comprehensive warranty.</p>
+        
+
+  <!-- FAQ SECTION -->
+  <h2 id="faq">Frequently Asked Questions</h2>
+  <div class="faq-list" style="margin:24px 0;">
+    <details class="faq">
+      <summary><span class="faq__c">FAQ</span> What size transformer is needed for a 1-ton induction furnace in Pakistan?<span class="faq__s" aria-hidden="true"></span></summary>
+      <p class="faq__a">A 1-ton crucible typically requires a 1,000 kVA to 1,250 kVA OFWF water-cooled transformer connected to an 11kV primary distribution feeder.</p>
+    </details>
+    <details class="faq">
+      <summary><span class="faq__c">FAQ</span> What is the typical electricity consumption per ton of liquid steel?<span class="faq__s" aria-hidden="true"></span></summary>
+      <p class="faq__a">Modern medium-frequency solid-state induction furnaces consume between 550 kWh to 620 kWh per metric ton of melted steel scrap.</p>
+    </details>
+    <details class="faq">
+      <summary><span class="faq__c">FAQ</span> Why is OFWF water cooling preferred over standard radiator air cooling for furnaces?<span class="faq__s" aria-hidden="true"></span></summary>
+      <p class="faq__a">OFWF cooling dissipates massive continuous heat loads in a compact footprint and maintains safe operating oil temperatures (<75°C) even during 48°C Pakistani summer heatwaves.</p>
+    </details>
+    <details class="faq">
+      <summary><span class="faq__c">FAQ</span> What happens if an induction furnace operates with an undersized transformer?<span class="faq__s" aria-hidden="true"></span></summary>
+      <p class="faq__a">The transformer core will saturate and windings will overheat, causing frequent 11kV VCB breaker trips, extended heat melting times, and rapid cellulose paper degradation leading to coil blowout.</p>
+    </details>
+    <details class="faq">
+      <summary><span class="faq__c">FAQ</span> Can TransfoLine deliver emergency replacement furnace transformers in Pakistan?<span class="faq__s" aria-hidden="true"></span></summary>
+      <p class="faq__a">Yes, TransfoLine maintains 50+ tested units in stock and dispatches emergency replacement transformers across Punjab and Sindh within 24 to 48 hours.</p>
+    </details>
+  </div>
+
+  <!-- CONVERSION CTA -->
+  <div class="post-cta" style="background:var(--surface);border:2px solid var(--accent);padding:clamp(22px,3.2vw,36px);margin:48px 0 20px;">
+    <h3 style="color:var(--ink);margin-top:0;font-size:22px;">Need Direct Technical Assistance or a Factory-Direct Quote?</h3>
+    <p style="color:var(--ink-light);margin-bottom:20px;font-size:15px;line-height:1.6;">TransfoLine supplies, installs, overhauls, and repairs heavy industrial transformers across Pakistan with nationwide 48-hour delivery, genuine WAPDA P-10 compliance, and 12-month full warranty.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+      <a href="../steel-furnace-transformers.html" class="btn btn--solid">Explore Steel Furnace Transformers <span class="ar">→</span></a>
+      <a href="tel:+923144641288" class="btn btn--line" style="color:var(--ink);border-color:var(--line-strong);">Call 0314 4641288 <span class="ar">→</span></a>
+    </div>
+  </div>
+
+</article>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="sheet">
+    <!-- FOOTER TOP: BRAND, DIRECT CONTACT & SOCIALS -->
+    <div class="footer__top">
+      <div class="footer__brand-box">
+        <a href="../index.html#top" class="brand"><img src="../images/transfoline-logo.webp" alt="TransfoLine" class="brand__logo1"></a>
+        <p>TransfoLine (Private) Limited — Pakistan's premier turnkey industrial solar EPC contractor, high-voltage substation manufacturer, and certified testing specialist since 2008.</p>
+      </div>
+      <div class="footer__top-contact">
+        <div class="footer__direct-links">
+          <a href="tel:+923144641288" class="footer__c-item"><span class="sq"></span> 0314 4641288</a>
+          <a href="mailto:info@transfoline.com.pk" class="footer__c-item"><span class="sq"></span> info@transfoline.com.pk</a>
+          <span class="footer__c-item"><span class="sq"></span> Raiwind Road, Lahore</span>
+        </div>
+        <div class="footer__socials">
+          <a href="https://pk.linkedin.com/company/transfoline" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45c-.88 0-1.6.72-1.6 1.6 0 .89.72 1.6 1.6 1.6.89 0 1.61-.71 1.61-1.6 0-.88-.72-1.6-1.61-1.6Z"/></svg> LinkedIn</a>
+          <a href="https://www.facebook.com/p/Transfo-Line-100089514231981/" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 0 0 8.44-9.9c0-5.53-4.5-10.02-10-10.02Z"/></svg> Facebook</a>
+          <span class="stat-tag is-ok">24/7 Support</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN 4 EQUAL-HEIGHT COLUMNS -->
+    <div class="footer__grid">
+      <!-- COLUMN 1: TRANSFORMERS -->
+      <div class="footer__col">
+        <h4>Transformers</h4>
+        <div class="footer__links">
+          <a href="../new-used-transformers.html">New &amp; Certified-Used</a>
+          <a href="../solar-inverter-transformers-epc.html">Solar Step-Up Transformers</a>
+          <a href="../steel-furnace-transformers.html">Steel Furnace Transformers (OFWF)</a>
+          <a href="../dry-type-cast-resin-transformers.html">Cast Resin Dry-Type</a>
+          <a href="../high-voltage-power-transformers.html">High-Voltage Power (MVA)</a>
+          <a href="../spare-parts.html">Spare Parts &amp; Supplies</a>
+        </div>
+      </div>
+
+      <!-- COLUMN 2: ENGINEERING & EPC -->
+      <div class="footer__col">
+        <h4>Engineering &amp; EPC</h4>
+        <div class="footer__links">
+          <a href="../turnkey-substation-epc.html">Turnkey Substation EPC</a>
+          <a href="../transformer-repair.html">Repair &amp; Rewinding</a>
+          <a href="../oil-dehydration.html">Oil Dehydration &amp; BDV</a>
+          <a href="../preventive-maintenance-amc.html">Maintenance &amp; AMC</a>
+          <a href="../ht-lt-panel-installation.html">HT / LT Panel Installation</a>
+          <a href="../town-electrification.html">Town Electrification</a>
+          <a href="../testing-commissioning.html">Testing &amp; Commissioning</a>
+        </div>
+      </div>
+
+      <!-- COLUMN 3: SOLAR & RENEWABLE -->
+      <div class="footer__col">
+        <h4>Solar &amp; Renewable</h4>
+        <div class="footer__links">
+          <a href="../solar-energy-solutions.html">Commercial &amp; Industrial Solar</a>
+          <a href="../solar-panels-inverters-cables.html">Panels, Inverters &amp; Cables</a>
+          <a href="../100kw-solar-system-price-pakistan.html">100 kW Commercial System</a>
+          <a href="../500kw-industrial-solar-system.html">500 kW Industrial Substation</a>
+          <a href="../1mw-solar-power-plant-pakistan.html">1 MW to 5 MW Solar Plants</a>
+          <a href="../ev-charging-solutions-pakistan.html">Commercial EV Fast Charging</a>
+          <a href="../calculators.html" style="color:var(--accent-ink);font-weight:600;">Engineering Calculators Hub <span class="ar">→</span></a>
+        </div>
+      </div>
+
+      <!-- COLUMN 4: KNOWLEDGE & HUBS -->
+      <div class="footer__col">
+        <h4>Knowledge &amp; Cities</h4>
+        <div class="footer__links">
+          <a href="../blog.html" style="color:var(--accent-ink);font-weight:600;">Blog &amp; Knowledge Hub <span class="ar">→</span></a>
+          <a href="../transformer-services-lahore.html">Lahore (Head Office)</a>
+          <a href="../transformer-services-karachi.html">Karachi Coastal Division</a>
+          <a href="../transformer-services-islamabad.html">Islamabad Capital Hub</a>
+          <a href="../transformer-services-rawalpindi.html">Rawalpindi Industrial</a>
+          <a href="../transformer-services-faisalabad.html">Faisalabad Textile Hub</a>
+          <a href="../transformer-services-multan.html">Multan &amp; South Punjab</a>
+          <a href="../transformer-services-gilgit.html">Gilgit &amp; Northern Areas</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER BASE -->
+    <div class="footer__base">
+      <span>© 2026 TRANSFO LINE (PRIVATE) LIMITED</span>
+      <span>D-U-N-S® Registered: <a href="https://www.dnb.com/business-directory/company-profiles.transfo_line_(private)_limited.6e4d401fc4a6bd30db45ae2a751837d4.html" target="_blank" rel="noopener" class="footer__credit">75-794-4658</a></span>
+      <span>Designed &amp; Developed by <a href="https://webcraftio.com" target="_blank" rel="noopener" class="footer__credit">WebCraftio</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============ BOTTOM CALL BAR ============ -->
+<div class="bottom-call-bar">
+  <a href="tel:+923144641288" class="bottom-call-btn" aria-label="Call TransfoLine 0314 4641288">
+    <span class="bottom-call-btn__icon">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z" fill="currentColor"/></svg>
+    </span>
+    <span class="bottom-call-btn__text">
+      <span class="bottom-call-btn__tag"><span class="bottom-call-btn__dot"></span> Testing Helpline</span>
+      <span class="bottom-call-btn__number">0314 4641288</span>
+    </span>
+    <span class="bottom-call-btn__action">Call Now <span class="bottom-call-btn__arr">→</span></span>
+  </a>
+</div>
+
+<!-- ============ FLOATING BUTTONS ============ -->
+<div class="float-btns">
+  <a href="tel:+923144641288" class="call-float" aria-label="Call TransfoLine">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2Z" fill="currentColor"/></svg>
+  </a>
+  <a href="https://wa.me/923144641288" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="none"><path d="M16.004 2.667A13.28 13.28 0 0 0 2.73 15.942a13.2 13.2 0 0 0 1.79 6.628L2.667 29.333l6.96-1.825A13.28 13.28 0 0 0 16.004 29.3 13.32 13.32 0 1 0 16.004 2.667Zm0 24.32a11 11 0 0 1-5.61-1.535l-.402-.24-4.17 1.094 1.113-4.07-.262-.418a10.96 10.96 0 0 1-1.684-5.876A11.02 11.02 0 1 1 16.004 26.987Zm6.044-8.244c-.332-.166-1.963-.968-2.267-1.08-.305-.11-.526-.166-.748.167s-.858 1.08-1.052 1.3c-.194.222-.387.25-.72.084a9.1 9.1 0 0 1-2.675-1.65 10 10 0 0 1-1.85-2.303c-.194-.333-.02-.513.146-.678.149-.15.332-.388.498-.582.166-.194.222-.333.332-.555.111-.222.056-.416-.028-.582s-.748-1.803-1.025-2.47c-.27-.648-.544-.56-.748-.57l-.637-.012a1.22 1.22 0 0 0-.886.416c-.305.333-1.163 1.136-1.163 2.77s1.19 3.213 1.357 3.435c.166.222 2.342 3.575 5.675 5.014.793.342 1.412.547 1.894.7.796.253 1.52.217 2.093.131.639-.095 1.963-.803 2.24-1.578.277-.775.277-1.44.194-1.578-.083-.139-.305-.222-.637-.389Z" fill="currentColor"/></svg>
+  </a>
+</div>
+
+<script src="../app.js"></script>
+<script src="../tracking.js"></script>
+</body>
+</html>
+
+</body>
+</html>
